@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ui-kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ui-kit">
+      <div class="block ui-kit__block ui-kit__block_input">
+        <div class="block__title">Input</div>
+        <div class="block__content">
+          <div class="order-date block__order-date">
+            <label class="order-date__title" for="orderDateBlank"
+              >Дата и время заказа</label
+            >
+            <div class="order-date__content">
+              <input
+                class="input order-date__input"
+                placeholder="Введите"
+                type="text"
+                id="orderDateBlank"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="order-date block__order-date">
+            <label class="order-date__title" for="orderDateIncorrect"
+              >Дата и время заказа</label
+            >
+            <div class="order-date__content">
+              <input
+                class="input order-date__input order-date__input_incorrect"
+                placeholder="Введите"
+                type="text"
+                id="orderDateIncorrect"
+                value="06.12.2021"
+              />
+              <button
+                class="button order-date__button button_x-button"
+              ></button>
+            </div>
+          </div>
+          <div class="order-date block__order-date">
+            <p class="order-date__title">Дата и время заказа</p>
+            <div class="order-date__content">
+              <input
+                class="input order-date__input order-date__input_disabled"
+                placeholder="Введите"
+                type="text"
+                value="06.12.2021"
+              />
+              <div class="order-date__icon order-date__icon_disabled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block ui-kit__block ui-kit__block_searchbar">
+        <div class="block__title">Searchbar</div>
+        <div class="block__content">
+          <div class="searchbar block__searchbar">
+            <div class="searchbar__content">
+              <div class="searchbar__icon"></div>
+              <input
+                class="input searchbar__input"
+                placeholder="Номер заказа или ФИО"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="searchbar block__searchbar">
+            <div class="searchbar__content">
+              <div class="searchbar__icon"></div>
+              <input
+                class="input searchbar__input"
+                placeholder="Номер заказа или ФИО"
+                type="text"
+                value="50744"
+              />
+              <button class="button searchbar__button button_x-button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block ui-kit__block ui-kit__block_checkbox-radio">
+        <div class="block__title">Checkbox</div>
+        <div class="block__content block__content_checkbox-radio">
+          <div class="checkbox block__checkbox">
+            <div class="checkbox__content">
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                checked="checked"
+                id="checkbox_1"
+              />
+              <label class="checkbox__container" for="checkbox_1"></label>
+            </div>
+          </div>
+          <div class="checkbox block__checkbox">
+            <div class="checkbox__content">
+              <input class="checkbox__input" type="checkbox" id="checkbox_2" />
+              <label class="checkbox__container" for="checkbox_2"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block ui-kit__block ui-kit__block_checkbox-radio">
+        <div class="block__title">Radio</div>
+        <div class="block__content block__content_checkbox-radio">
+          <div class="radio block__radio">
+            <div class="radio__content">
+              <input
+                class="radio__input"
+                name="radio-name"
+                type="radio"
+                id="radio_1"
+              />
+              <label class="radio__container" for="radio_1"></label>
+            </div>
+          </div>
+          <div class="radio block__radio">
+            <div class="radio__content">
+              <input
+                class="radio__input"
+                name="radio-name"
+                type="radio"
+                checked="checked"
+                id="radio_2"
+              />
+              <label class="radio__container" for="radio_2"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block ui-kit__block ui-kit__block_button-block">
+        <div class="block__title">Button</div>
+        <div class="block__content block__content_button-block">
+          <div class="button-block block__button-block">
+            <div class="button-block__content">
+              <div class="button-block__wrapper">
+                <button class="button button_theme_blue button_size_default">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                  <span class="button__text">Text here</span>
+                </button>
+                <button class="button button_theme_blue button_size_default">
+                  <span class="button__text">Text here</span>
+                </button>
+                <button
+                  class="button button_theme_blue button_size_default button_icon_only"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                </button>
+              </div>
+              <div class="button-block__wrapper">
+                <button class="button button_theme_blue button_size_small">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                  <span class="button__text">Text here</span>
+                </button>
+                <button class="button button_theme_blue button_size_small">
+                  <span class="button__text">Text here</span>
+                </button>
+                <button
+                  class="button button_theme_blue button_size_small button_icon_only"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="button-block block__button-block">
+            <div class="button-block__content">
+              <div class="button-block__wrapper">
+                <button class="button button_theme_link button_size_default">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                  <span class="button__text">Text here</span>
+                </button>
+                <button class="button button_theme_link button_size_default">
+                  <span class="button__text">Text here</span>
+                </button>
+                <button
+                  class="button button_theme_link button_size_default button_icon_only"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                </button>
+              </div>
+              <div class="button-block__wrapper">
+                <button class="button button_theme_link button_size_small">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                  <span class="button__text">Text here</span>
+                </button>
+                <button class="button button_theme_link button_size_small">
+                  <span class="button__text">Text here</span>
+                </button>
+                <button
+                  class="button button_theme_link button_size_small button_icon_only"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="button-block block__button-block">
+            <div class="button-block__content">
+              <div class="button-block__wrapper">
+                <button class="button button_theme_text button_size_default">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                  <span class="button__text">Text here</span>
+                </button>
+                <button class="button button_theme_text button_size_default">
+                  <span class="button__text">Text here</span>
+                </button>
+                <button
+                  class="button button_theme_text button_size_default button_icon_only"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="8" cy="8" r="8" stroke="none" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block ui-kit__block ui-kit__block_dropdown">
+        <div class="block__title">Dropdown</div>
+        <div class="block__content">
+          <div class="dropdown block__dropdown">
+            <div class="dropdown__content">
+              <div class="dropdown-block dropdown__wrapper">
+                <div class="checkbox-dropdown dropdown-block__checkbox">
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          id="checkbox_new"
+                        />
+                        <label class="checkbox__container" for="checkbox_new"
+                          >Новый</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          id="checkbox_calc"
+                        />
+                        <label class="checkbox__container" for="checkbox_calc"
+                          >Рассчет</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked="checked"
+                          id="checkbox_approved"
+                        />
+                        <label
+                          class="checkbox__container"
+                          for="checkbox_approved"
+                          >Подтвержден</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          id="checkbox_delayed"
+                        />
+                        <label
+                          class="checkbox__container"
+                          for="checkbox_delayed"
+                          >Отложен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          id="checkbox_completed"
+                        />
+                        <label
+                          class="checkbox__container"
+                          for="checkbox_completed"
+                          >Выполнен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkbox-dropdown__item">
+                    <div class="checkbox checkbox-dropdown__checkbox">
+                      <div class="checkbox__content">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          id="checkbox_canceled"
+                        />
+                        <label
+                          class="checkbox__container"
+                          for="checkbox_canceled"
+                          >Отменен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="radio-dropdown dropdown-block__radio">
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          id="radio_new"
+                        />
+                        <label class="radio__container" for="radio_new"
+                          >Новый</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          id="radio_calc"
+                        />
+                        <label class="radio__container" for="radio_calc"
+                          >Рассчет</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          checked="checked"
+                          id="radio_approved"
+                        />
+                        <label class="radio__container" for="radio_approved"
+                          >Подтвержден</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          id="radio_delayed"
+                        />
+                        <label class="radio__container" for="radio_delayed"
+                          >Отложен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          id="radio_completed"
+                        />
+                        <label class="radio__container" for="radio_completed"
+                          >Выполнен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio-dropdown__item">
+                    <div class="radio radio-dropdown__radio">
+                      <div class="radio__content">
+                        <input
+                          class="radio__input"
+                          name="radio-dropdown"
+                          type="radio"
+                          id="radio_canceled"
+                        />
+                        <label class="radio__container" for="radio_canceled"
+                          >Отменен</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-block dropdown__wrapper">
+                <div class="select-page form-block__select-page">
+                  <span class="select-page__title">Номер страницы</span>
+                  <input
+                    class="input select-page__input"
+                    placeholder="Введите номер"
+                    type="text"
+                    id=""
+                    value=""
+                  />
+                </div>
+                <div class="delete-record form-block__delete-record">
+                  <span class="delete-record__title">Удалить n записей?</span>
+                  <button
+                    class="button button_full-width delete-record__button button_theme_link button_size_small"
+                  >
+                    <span class="button__text">Удалить</span>
+                  </button>
+                  <button
+                    class="button button_full-width delete-record__button button_theme_blue button_size_small"
+                  >
+                    <span class="button__text">Отмена</span>
+                  </button>
+                </div>
+                <div class="select-theme form-block__select-theme">
+                  <span class="select-theme__title">Выберите тему</span>
+                  <button
+                    class="button button_full-width select-theme__button button_theme_link button_size_small"
+                  >
+                    <svg
+                      class="icon select-theme__icon select-theme__icon_unpushed"
+                      viewBox="0 0 16 16"
+                      fill="#459DF5"
+                      strok="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8" cy="8" r="4" stroke="none" />
+                      <path d="M15 9L16 8L15 7H13V9H15Z" stroke="none" />
+                      <path d="M1 9L0 8L1 7H3V9H1Z" stroke="none" />
+                      <path d="M7 15L8 16L9 15V13H7V15Z" stroke="none" />
+                      <path d="M7 1L8 0L9 1V3H7V1Z" stroke="none" />
+                      <path
+                        d="M12.5 14H14L14 12.5L12.5 11L11 12.5L12.5 14Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M2 3.5L2 2L3.5 2L5 3.5L3.5 5L2 3.5Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M3.5 14H2L2 12.5L3.5 11L5 12.5L3.5 14Z"
+                        stroke="none"
+                      />
+                      <path
+                        d="M14 3.5V2L12.5 2L11 3.5L12.5 5L14 3.5Z"
+                        stroke="none"
+                      />
+                    </svg>
+                    <span class="button__text">Светлая</span>
+                  </button>
+                  <button
+                    class="button button_full-width select-theme__button button_theme_blue button_size_small"
+                  >
+                    <svg
+                      class="icon select-theme__icon select-theme__icon_pushed"
+                      viewBox="0 0 16 16"
+                      fill="#8055FF"
+                      stroke="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 15C12.0269 15 15.5 11.5021 15 7.5C14.7688 10.0468 12.6071 12 10 12C7.23858 12 5 9.76142 5 7C5 4.23858 7.23858 2 10 2C11 2 12 2.5 12 2.5C11 1.5 10 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
+                        stroke="none"
+                      />
+                    </svg>
+                    <span class="button__text">Темная</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
