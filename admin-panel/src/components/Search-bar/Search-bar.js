@@ -1,6 +1,7 @@
 import "./Search-bar.module.css";
 
-function Searchbar() {
+function Searchbar(props) {
+  const {} = props;
   return (
     <div className="block ui-kit__block ui-kit__block_searchbar">
       <div className="block__title">Searchbar</div>

@@ -1,6 +1,7 @@
 import "./Dropdown.module.css";
 
-function Dropdown() {
+function Dropdown(props) {
+  const {} = props;
   return (
     <div className="block ui-kit__block ui-kit__block_dropdown">
       <div className="block__title">Dropdown</div>

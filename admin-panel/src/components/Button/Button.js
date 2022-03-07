@@ -1,6 +1,7 @@
 import "./Button.module.css";
 
-function Button() {
+function Button(props) {
+  const {} = props;
   return (
     <div className="block ui-kit__block ui-kit__block_button-block">
       <div className="block__title">Button</div>

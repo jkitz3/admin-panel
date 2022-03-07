@@ -1,6 +1,7 @@
 import "./Input.module.css";
 
-function Input() {
+function Input(props) {
+  const {} = props;
   return (
     <div className="block ui-kit__block ui-kit__block_input">
       <div className="block__title">Input</div>

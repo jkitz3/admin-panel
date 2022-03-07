@@ -1,6 +1,7 @@
 import "./Checkbox-radio.module.css";
 
-function Checkboxradio() {
+function Checkboxradio(props) {
+  const {} = props;
   return (
     <>
       <div className="block ui-kit__block ui-kit__block_checkbox-radio">
