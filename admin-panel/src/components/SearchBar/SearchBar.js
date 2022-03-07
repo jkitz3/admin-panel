@@ -1,6 +1,6 @@
-import "./Search-bar.module.css";
+import "./SearchBar.module.css";
 
-function Searchbar(props) {
+function SearchBar(props) {
   const {} = props;
   return (
     <div className="block ui-kit__block ui-kit__block_searchbar">
@@ -34,4 +34,4 @@ function Searchbar(props) {
   );
 }
 
-export default Searchbar;
+export default SearchBar;

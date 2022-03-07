@@ -1,6 +1,6 @@
-import "./Checkbox-radio.module.css";
+import "./CheckboxRadio.module.css";
 
-function Checkboxradio(props) {
+function CheckboxRadio(props) {
   const {} = props;
   return (
     <>
@@ -62,4 +62,4 @@ function Checkboxradio(props) {
   );
 }
 
-export default Checkboxradio;
+export default CheckboxRadio;
