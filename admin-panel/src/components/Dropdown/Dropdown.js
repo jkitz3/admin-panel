@@ -1,7 +1,8 @@
 import "./Dropdown.module.css";
 
 function Dropdown(props) {
-  const {} = props;
+  const { value, isDropdownOpen = false } = props;
+
   return (
     <div className="block ui-kit__block ui-kit__block_dropdown">
       <div className="block__title">Dropdown</div>
@@ -213,7 +214,7 @@ function Dropdown(props) {
                   placeholder="Введите номер"
                   type="text"
                   id=""
-                  value=""
+                  value={props.value}
                 />
               </div>
               <div className="delete-record form-block__delete-record">

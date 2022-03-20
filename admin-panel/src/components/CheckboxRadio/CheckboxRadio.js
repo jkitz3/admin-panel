@@ -1,7 +1,8 @@
 import "./CheckboxRadio.module.css";
 
 function CheckboxRadio(props) {
-  const {} = props;
+  const { isCheckboxChecked = false, isRadioChecked = false } = props;
+
   return (
     <>
       <div className="block ui-kit__block ui-kit__block_checkbox-radio">
@@ -23,6 +24,7 @@ function CheckboxRadio(props) {
               <input
                 className="checkbox__input"
                 type="checkbox"
+                checked={props.isCheckboxChecked}
                 id="checkbox_2"
               />
               <label className="checkbox__container" for="checkbox_2"></label>
@@ -39,6 +41,7 @@ function CheckboxRadio(props) {
                 className="radio__input"
                 name="radio-name"
                 type="radio"
+                checked={props.isRadioChecked}
                 id="radio_1"
               />
               <label className="radio__container" for="radio_1"></label>

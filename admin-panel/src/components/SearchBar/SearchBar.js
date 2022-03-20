@@ -1,7 +1,8 @@
 import "./SearchBar.module.css";
 
 function SearchBar(props) {
-  const {} = props;
+  const { value, isInputBlank = true, isInputCorrect = true } = props;
+
   return (
     <div className="block ui-kit__block ui-kit__block_searchbar">
       <div className="block__title">Searchbar</div>
@@ -13,7 +14,7 @@ function SearchBar(props) {
               className="input searchbar__input"
               placeholder="Номер заказа или ФИО"
               type="text"
-              value=""
+              value={props.value}
             />
           </div>
         </div>

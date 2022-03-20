@@ -1,7 +1,13 @@
 import "./Input.module.css";
 
 function Input(props) {
-  const {} = props;
+  const {
+    value,
+    isInputBlank = true,
+    isInputCorrect = true,
+    isInputDisabled = false,
+  } = props;
+
   return (
     <div className="block ui-kit__block ui-kit__block_input">
       <div className="block__title">Input</div>
@@ -16,7 +22,7 @@ function Input(props) {
               placeholder="Введите"
               type="text"
               id="orderDateBlank"
-              value=""
+              value={props.value}
             />
           </div>
         </div>

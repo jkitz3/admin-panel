@@ -1,7 +1,8 @@
 import "./Button.module.css";
 
 function Button(props) {
-  const {} = props;
+  const { isButtonClicked = false, isButtonVisible = true } = props;
+
   return (
     <div className="block ui-kit__block ui-kit__block_button-block">
       <div className="block__title">Button</div>
