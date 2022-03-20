@@ -19,7 +19,10 @@ function Dropdown(props) {
                         type="checkbox"
                         id="checkbox_new"
                       />
-                      <label className="checkbox__container" for="checkbox_new">
+                      <label
+                        className="checkbox__container checkbox__container_dropdown"
+                        for="checkbox_new"
+                      >
                         Новый
                       </label>
                     </div>
@@ -34,7 +37,7 @@ function Dropdown(props) {
                         id="checkbox_calc"
                       />
                       <label
-                        className="checkbox__container"
+                        className="checkbox__container checkbox__container_dropdown"
                         for="checkbox_calc"
                       >
                         Рассчет
@@ -52,7 +55,7 @@ function Dropdown(props) {
                         id="checkbox_approved"
                       />
                       <label
-                        className="checkbox__container"
+                        className="checkbox__container checkbox__container_dropdown"
                         for="checkbox_approved"
                       >
                         Подтвержден
@@ -69,7 +72,7 @@ function Dropdown(props) {
                         id="checkbox_delayed"
                       />
                       <label
-                        className="checkbox__container"
+                        className="checkbox__container checkbox__container_dropdown"
                         for="checkbox_delayed"
                       >
                         Отложен
@@ -86,7 +89,7 @@ function Dropdown(props) {
                         id="checkbox_completed"
                       />
                       <label
-                        className="checkbox__container"
+                        className="checkbox__container checkbox__container_dropdown"
                         for="checkbox_completed"
                       >
                         Выполнен
@@ -103,7 +106,7 @@ function Dropdown(props) {
                         id="checkbox_canceled"
                       />
                       <label
-                        className="checkbox__container"
+                        className="checkbox__container checkbox__container_dropdown"
                         for="checkbox_canceled"
                       >
                         Отменен
@@ -122,7 +125,10 @@ function Dropdown(props) {
                         type="radio"
                         id="radio_new"
                       />
-                      <label className="radio__container" for="radio_new">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_new"
+                      >
                         Новый
                       </label>
                     </div>
@@ -137,7 +143,10 @@ function Dropdown(props) {
                         type="radio"
                         id="radio_calc"
                       />
-                      <label className="radio__container" for="radio_calc">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_calc"
+                      >
                         Рассчет
                       </label>
                     </div>
@@ -153,7 +162,10 @@ function Dropdown(props) {
                         checked="checked"
                         id="radio_approved"
                       />
-                      <label className="radio__container" for="radio_approved">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_approved"
+                      >
                         Подтвержден
                       </label>
                     </div>
@@ -168,7 +180,10 @@ function Dropdown(props) {
                         type="radio"
                         id="radio_delayed"
                       />
-                      <label className="radio__container" for="radio_delayed">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_delayed"
+                      >
                         Отложен
                       </label>
                     </div>
@@ -183,7 +198,10 @@ function Dropdown(props) {
                         type="radio"
                         id="radio_completed"
                       />
-                      <label className="radio__container" for="radio_completed">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_completed"
+                      >
                         Выполнен
                       </label>
                     </div>
@@ -198,7 +216,10 @@ function Dropdown(props) {
                         type="radio"
                         id="radio_canceled"
                       />
-                      <label className="radio__container" for="radio_canceled">
+                      <label
+                        className="radio__container radio__container_dropdown"
+                        for="radio_canceled"
+                      >
                         Отменен
                       </label>
                     </div>

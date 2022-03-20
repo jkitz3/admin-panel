@@ -1,6 +1,6 @@
 .ui-kit__block_checkbox-radio {
-  width: 104px;
-  min-width: 104px;
+  /* width: 104px;
+  min-width: 104px; */
   padding: 24px;
 }
 .block__checkbox,
@@ -19,7 +19,6 @@
   width: 100%;
   min-height: 32px;
   position: relative;
-  padding-left: 24px;
   cursor: pointer;
 }
 .checkbox__container::before {
@@ -55,7 +54,6 @@
   width: 100%;
   min-height: 32px;
   position: relative;
-  padding-left: 24px;
   cursor: pointer;
 }
 .radio__container::before {

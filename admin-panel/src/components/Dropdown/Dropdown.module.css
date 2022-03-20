@@ -25,6 +25,10 @@
 .form-block__delete-record {
   margin-right: 48px;
 }
+.radio__container_dropdown,
+.checkbox__container_dropdown {
+  padding-left: 24px;
+}
 .checkbox-dropdown,
 .radio-dropdown {
   width: 160px;
