@@ -1,9 +1,27 @@
-.ui-kit__block_input {
+.uiKitBlock {
+  position: relative;
+  width: 354px;
+  min-width: 354px;
+  padding: 48px;
+  margin: 0 48px 48px 0;
+  border: 1px dashed #a8a8ff;
+  border-radius: 4px;
+}
+.uiKitBlock:last-child {
+  margin: 0;
+}
+.blockTitle {
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  color: #a8a8ff;
+}
+.uiKitBlockInput {
   width: 354px;
   min-width: 354px;
   padding: 48px;
 }
-.block__content {
+.blockContent {
   display: flex;
   flex-direction: column;
 }
@@ -19,7 +37,7 @@
 .button:focus {
   outline: none;
 }
-.button_x-button {
+.buttonXButton {
   width: 16px;
   position: absolute;
   height: 16px;
@@ -41,28 +59,28 @@
 .input::-webkit-input-placeholder {
   color: #bad8f5;
 }
-.block__order-date {
+.blockOrderDate {
   margin-bottom: 22px;
 }
-.block__order-date:last-child {
+.blockOrderDate:last-child {
   margin-bottom: 0px;
 }
-.order-date__content {
+.orderDateContent {
   position: relative;
 }
-.order-date__input {
+.orderDateInput {
   border: 1px solid #459df5;
   padding: 0 32px 0 8px;
 }
-.order-date__input_incorrect {
+.orderDateInputIncorrect {
   border-color: #f53152;
 }
-.order-date__input_disabled {
+.orderDateInputDisabled {
   background-color: #bad8f5;
   cursor: not-allowed;
   pointer-events: none;
 }
-.order-date__icon_disabled {
+.orderDateIconDisabled {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -73,7 +91,7 @@
   background-color: unset;
   border: unset;
 }
-.order-date__title {
+.orderDateTitle {
   margin-bottom: 8px;
   display: inline-block;
   width: 100%;

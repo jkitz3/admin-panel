@@ -1,61 +1,80 @@
-import "./Input.module.css";
+import { useState } from "react";
+import cx from 'classnames';
+import styles from './Input.module.css';
 
-function Input(props) {
-  const {
+export const Input = ({
+    children,
+    className,
     value,
-    isInputBlank = true,
-    isInputCorrect = true,
-    isInputDisabled = false,
-  } = props;
+    onChange,
+    isInputBlank,
+    isInputIncorrect = true,
+    isInputDisabled = true,
+    ...props
+}) => { 
+    const [inputEmpty, setInputEmpty] = useState('');
+    const [inputIncorrect, setInputIncorrect] = useState('06.12.2021');
 
-  return (
-    <div className="block ui-kit__block ui-kit__block_input">
-      <div className="block__title">Input</div>
-      <div className="block__content">
-        <div className="order-date block__order-date">
-          <label className="order-date__title" for="orderDateBlank">
+    const handleInputEmpty = ({target: {value}}) => {
+      setInputEmpty(value);
+    }
+
+    const handleInputIncorrect = ({target: {value}}) => {
+      setInputIncorrect(value);
+    }
+
+    const clearInput = () => {
+      setInputIncorrect('');
+    }
+        
+    return (
+      <div className={cx(styles.uiKitBlock, styles.uiKitBlockInput)}> 
+      <div className={styles.blockTitle}>Input</div>
+      <div className={styles.blockContent}>
+        <div className={styles.blockOrderDate}>
+          <label className={styles.orderDateTitle} htmlFor="orderDateBlank">
             Дата и время заказа
           </label>
-          <div className="order-date__content">
+          <div className={styles.orderDateContent}>
             <input
-              className="input order-date__input"
+              className={cx(styles.input, styles.orderDateInput)}
               placeholder="Введите"
               type="text"
               id="orderDateBlank"
-              value={props.value}
+              value={inputEmpty}
+              onChange={handleInputEmpty}
             />
           </div>
         </div>
-        <div className="order-date block__order-date">
-          <label className="order-date__title" for="orderDateIncorrect">
+        <div className={styles.blockOrderDate}>
+          <label className={styles.orderDateTitle} htmlFor="orderDateIncorrect">
             Дата и время заказа
           </label>
-          <div className="order-date__content">
+          <div className={styles.orderDateContent}>
             <input
-              className="input order-date__input order-date__input_incorrect"
+              className={cx(styles.input, styles.orderDateInput, styles.orderDateInputIncorrect)}
               placeholder="Введите"
               type="text"
               id="orderDateIncorrect"
-              value="06.12.2021"
+              value={inputIncorrect}
+              onChange={handleInputIncorrect}
             />
-            <button className="button order-date__button button_x-button"></button>
+            <button className={cx(styles.button, styles.buttonXButton)} onClick={clearInput}></button>
           </div>
         </div>
-        <div className="order-date block__order-date">
-          <p className="order-date__title">Дата и время заказа</p>
-          <div className="order-date__content">
+        <div className={styles.blockOrderDate}>
+          <p className={styles.orderDateTitle}>Дата и время заказа</p>
+          <div className={styles.orderDateContent}>
             <input
-              className="input order-date__input order-date__input_disabled"
+              className={cx(styles.input, styles.orderDateInput, styles.orderDateInputDisabled)}
               placeholder="Введите"
               type="text"
-              value="06.12.2021"
+              defaultValue="06.12.2021"
             />
-            <div className="order-date__icon order-date__icon_disabled"></div>
+            <div className={styles.orderDateIconDisabled}></div>
           </div>
         </div>
       </div>
     </div>
-  );
-}
-
-export default Input;
+    );
+};

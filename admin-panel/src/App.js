@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Input from "./components/Input/Input";
+import { Input } from "./components/Input/Input";
 import SearchBar from "./components/SearchBar/SearchBar";
 import CheckboxRadio from "./components/CheckboxRadio/CheckboxRadio";
 import Button from "./components/Button/Button";
