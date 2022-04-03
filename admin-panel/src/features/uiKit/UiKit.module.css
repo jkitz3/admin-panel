@@ -1,0 +1,58 @@
+.uiKit {
+  width: 100%;
+  height: 100vh;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.uiKitBlock {
+  position: relative;
+  width: 354px;
+  min-width: 354px;
+  padding: 48px;
+  margin: 0 48px 48px 0;
+  border: 1px dashed #a8a8ff;
+  border-radius: 4px;
+}
+.uiKitBlock:last-child {
+  margin: 0;
+}
+.blockTitle {
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  color: #a8a8ff;
+}
+.blockContent {
+  display: flex;
+  flex-direction: column;
+}
+.uiKitBlockSearchbar {
+  width: 354px;
+  min-width: 354px;
+  padding: 48px;
+}
+.uiKitBlockSizeSmall {
+  width: 104px;
+  min-width: 104px;
+  padding: 24px;
+}
+.blockContentCheckboxRadio {
+  flex-direction: row;
+}
+.uiKitBlockButtonBlock {
+  width: 578px;
+  min-width: 578px;
+  padding: 48px;
+}
+.blockContentButtonBlock {
+  display: flex;
+  flex-direction: row;
+}
+.uiKitBlockDropdown {
+  width: 674px;
+  min-width: 674px;
+  padding: 48px;
+}

@@ -1,12 +1,3 @@
-.ui-kit__block_searchbar {
-  width: 354px;
-  min-width: 354px;
-  padding: 48px;
-}
-.block__content {
-  display: flex;
-  flex-direction: column;
-}
 .button {
   background-repeat: no-repeat;
   background-color: unset;
@@ -19,13 +10,13 @@
 .button:focus {
   outline: none;
 }
-.button_x-button {
+.buttonXButton {
   width: 16px;
   position: absolute;
   height: 16px;
   top: 8px;
   left: 233px;
-  background-image: url(../../icons/x-medium.svg);
+  background-image: url(../../../icons/x-medium.svg);
 }
 .input {
   width: 100%;
@@ -41,28 +32,28 @@
 .input::-webkit-input-placeholder {
   color: #bad8f5;
 }
-.block__searchbar {
+.blockSearchbar {
   margin-bottom: 32px;
 }
-.block__searchbar:last-child {
+.blockSearchbar:last-child {
   margin-bottom: 0px;
 }
-.searchbar__content {
+.searchbarContent {
   position: relative;
 }
-.searchbar__icon {
+.searchbarIcon {
   width: 16px;
   position: absolute;
   height: 16px;
   top: 8px;
   left: 9px;
-  background-image: url(../../icons/search.svg);
+  background-image: url(../../../icons/search.svg);
   background-repeat: no-repeat;
   background-color: unset;
   border: unset;
   cursor: pointer;
 }
-.searchbar__input {
+.searchbarInput {
   border: 1px solid #459df5;
   padding: 0 32px 0 32px;
 }

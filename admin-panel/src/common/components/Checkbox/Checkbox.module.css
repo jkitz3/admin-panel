@@ -1,0 +1,67 @@
+.blockCheckbox {
+  margin-right: 24px;
+}
+.blockCheckbox:last-child {
+  margin-right: 0;
+}
+.blockContentCheckbox {
+  flex-direction: row;
+}
+.checkboxContent {
+  width: 16px;
+  height: 16px;
+}
+.checkboxContainer {
+  display: inline-block;
+  width: 100%;
+  min-height: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.checkboxContainer::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #bad8f5;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.checkboxContainer::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #bad8f5;
+  border-radius: 2px;
+  background-image: url(../../../icons/checkmark.svg);
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.checkbox {
+  height: 16px;
+  min-width: 16px;
+}
+.checkboxInput {
+  display: none;
+  position: absolute;
+}
+.checkboxInput:checked + .checkboxContainer::before {
+  background-color: #459df5;
+}
+.checkboxInput:checked + .checkboxContainer::after {
+  opacity: 1;
+  border: none;
+}
+.checkboxDropdownItem,
+.checkboxDropdownCheckbox {
+  width: 100%;
+}

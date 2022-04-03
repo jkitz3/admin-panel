@@ -1,30 +1,3 @@
-.uiKitBlock {
-  position: relative;
-  width: 354px;
-  min-width: 354px;
-  padding: 48px;
-  margin: 0 48px 48px 0;
-  border: 1px dashed #a8a8ff;
-  border-radius: 4px;
-}
-.uiKitBlock:last-child {
-  margin: 0;
-}
-.blockTitle {
-  position: absolute;
-  left: 10px;
-  top: -20px;
-  color: #a8a8ff;
-}
-.uiKitBlockInput {
-  width: 354px;
-  min-width: 354px;
-  padding: 48px;
-}
-.blockContent {
-  display: flex;
-  flex-direction: column;
-}
 .button {
   background-repeat: no-repeat;
   background-color: unset;
@@ -43,7 +16,7 @@
   height: 16px;
   top: 8px;
   left: 233px;
-  background-image: url(../../icons/x-medium.svg);
+  background-image: url(../../../icons/x-medium.svg);
 }
 .input {
   width: 100%;
@@ -86,7 +59,7 @@
   height: 16px;
   top: 8px;
   left: 233px;
-  background-image: url(../../icons/locked.svg);
+  background-image: url(../../../icons/locked.svg);
   background-repeat: no-repeat;
   background-color: unset;
   border: unset;

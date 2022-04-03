@@ -1,0 +1,63 @@
+.blockRadio {
+  margin-right: 24px;
+}
+.blockRadio:last-child {
+  margin-right: 0;
+}
+.radioContent {
+  width: 16px;
+  height: 16px;
+}
+.radioContainer {
+  display: inline-block;
+  width: 100%;
+  min-height: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.radioContainer::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #bad8f5;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.radioContainer::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-image: url(../../../icons/dot.svg);
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.radio {
+  height: 16px;
+  min-width: 16px;
+}
+.radioInput {
+  display: none;
+  position: absolute;
+}
+.radioInput:checked + .radioContainer::before {
+  background-color: #459df5;
+}
+.radioInput:checked + .radioContainer::after {
+  opacity: 1;
+  border: none;
+}
+.radioDropdownItem,
+.radioDropdownRadio {
+  width: 100%;
+}

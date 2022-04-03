@@ -1,0 +1,72 @@
+.button {
+  background-repeat: no-repeat;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.button:focus {
+  outline: none;
+}
+.blockButtonBlock {
+  margin-right: 48px;
+}
+.blockButtonBlock:last-child {
+  margin-right: 0;
+}
+.buttonBlockContent {
+  display: flex;
+  flex-direction: column;
+}
+.buttonBlockWrapper {
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+.buttonBlockWrapper:last-child {
+  margin-bottom: 0;
+}
+.buttonBlockWrapper:nth-child(2n) {
+  height: 104px;
+}
+.buttonThemeBlue {
+  border: 1px solid #459df5;
+  background-color: #459df5;
+  color: #fff;
+}
+.buttonThemeBlue .icon {
+  fill: #fff;
+}
+.buttonThemeLink {
+  color: #459df5;
+}
+.buttonThemeLink .icon {
+  fill: #459df5;
+}
+.buttonThemeText .icon {
+  fill: #000;
+}
+.buttonSizeDefault {
+  padding: 8px 16px;
+}
+.buttonSizeSmall {
+  padding: 4px 8px;
+}
+.buttonSizeDefault + .buttonIconOnly {
+  padding: 8px 8px;
+}
+.buttonSizeSmall + .buttonIconOnly {
+  padding: 4px 4px;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+}
+.icon + .buttonText {
+  margin-left: 8px;
+}
