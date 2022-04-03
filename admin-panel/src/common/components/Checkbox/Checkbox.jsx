@@ -32,7 +32,10 @@ export const Checkbox = ({
             onChange={handleCheckboxOne}
             id="checkbox_1"
           />
-          <label className={styles.checkboxContainer} htmlFor="checkbox_1"></label>
+          <label
+            className={styles.checkboxContainer}
+            htmlFor="checkbox_1"
+          ></label>
         </div>
       </div>
       <div className={cx(styles.checkbox, styles.blockCheckbox)}>
@@ -44,9 +47,12 @@ export const Checkbox = ({
             onChange={handleCheckboxTwo}
             id="checkbox_2"
           />
-          <label className={styles.checkboxContainer} htmlFor="checkbox_2"></label>
+          <label
+            className={styles.checkboxContainer}
+            htmlFor="checkbox_2"
+          ></label>
         </div>
       </div>
     </>
   );
-}
+};

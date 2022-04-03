@@ -10,13 +10,18 @@ export const Button = ({
   isButtonVisible,
   ...props
 }) => {
-  
   return (
-      <>
+    <>
       <div className={styles.blockButtonBlock}>
         <div className={styles.buttonBlockContent}>
           <div className={styles.buttonBlockWrapper}>
-            <button className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeDefault
+              )}
+            >
               <svg
                 className={styles.icon}
                 viewBox="0 0 16 16"
@@ -26,11 +31,22 @@ export const Button = ({
               </svg>
               <span className={styles.buttonText}>Text here</span>
             </button>
-            <button className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeDefault
+              )}
+            >
               <span className={styles.buttonText}>Text here</span>
             </button>
             <button
-              className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeDefault, styles.buttonIconOnly)}
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeDefault,
+                styles.buttonIconOnly
+              )}
             >
               <svg
                 className={styles.icon}
@@ -42,7 +58,13 @@ export const Button = ({
             </button>
           </div>
           <div className={styles.buttonBlockWrapper}>
-            <button className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeSmall)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeSmall
+              )}
+            >
               <svg
                 className={styles.icon}
                 viewBox="0 0 16 16"
@@ -52,11 +74,22 @@ export const Button = ({
               </svg>
               <span className={styles.buttonText}>Text here</span>
             </button>
-            <button className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeSmall)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeSmall
+              )}
+            >
               <span className={styles.buttonText}>Text here</span>
             </button>
             <button
-              className={cx(styles.button, styles.buttonThemeBlue, styles.buttonSizeSmall, styles.buttonIconOnly)}
+              className={cx(
+                styles.button,
+                styles.buttonThemeBlue,
+                styles.buttonSizeSmall,
+                styles.buttonIconOnly
+              )}
             >
               <svg
                 className={styles.icon}
@@ -72,7 +105,13 @@ export const Button = ({
       <div className={styles.blockButtonBlock}>
         <div className={styles.buttonBlockContent}>
           <div className={styles.buttonBlockWrapper}>
-            <button className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeDefault
+              )}
+            >
               <svg
                 className={styles.icon}
                 viewBox="0 0 16 16"
@@ -82,11 +121,22 @@ export const Button = ({
               </svg>
               <span className={styles.buttonText}>Text here</span>
             </button>
-            <button className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeDefault
+              )}
+            >
               <span className={styles.buttonText}>Text here</span>
             </button>
             <button
-              className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeDefault, styles.buttonIconOnly)}
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeDefault,
+                styles.buttonIconOnly
+              )}
             >
               <svg
                 className={styles.icon}
@@ -98,7 +148,13 @@ export const Button = ({
             </button>
           </div>
           <div className={styles.buttonBlockWrapper}>
-            <button className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeSmall)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeSmall
+              )}
+            >
               <svg
                 className={styles.icon}
                 viewBox="0 0 16 16"
@@ -108,11 +164,22 @@ export const Button = ({
               </svg>
               <span className={styles.buttonText}>Text here</span>
             </button>
-            <button className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeSmall)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeSmall
+              )}
+            >
               <span className={styles.buttonText}>Text here</span>
             </button>
             <button
-              className={cx(styles.button, styles.buttonThemeLink, styles.buttonSizeSmall, styles.buttonIconOnly)}
+              className={cx(
+                styles.button,
+                styles.buttonThemeLink,
+                styles.buttonSizeSmall,
+                styles.buttonIconOnly
+              )}
             >
               <svg
                 className={styles.icon}
@@ -128,7 +195,13 @@ export const Button = ({
       <div className={styles.blockButtonBlock}>
         <div className={styles.buttonBlockContent}>
           <div className={styles.buttonBlockWrapper}>
-            <button className={cx(styles.button, styles.buttonThemeText, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeText,
+                styles.buttonSizeDefault
+              )}
+            >
               <svg
                 className={styles.icon}
                 viewBox="0 0 16 16"
@@ -138,11 +211,22 @@ export const Button = ({
               </svg>
               <span className={styles.buttonText}>Text here</span>
             </button>
-            <button className={cx(styles.button, styles.buttonThemeText, styles.buttonSizeDefault)}>
+            <button
+              className={cx(
+                styles.button,
+                styles.buttonThemeText,
+                styles.buttonSizeDefault
+              )}
+            >
               <span className={styles.buttonText}>Text here</span>
             </button>
             <button
-              className={cx(styles.button, styles.buttonThemeText, styles.buttonSizeDefault, styles.buttonIconOnly)}
+              className={cx(
+                styles.button,
+                styles.buttonThemeText,
+                styles.buttonSizeDefault,
+                styles.buttonIconOnly
+              )}
             >
               <svg
                 className={styles.icon}
@@ -157,4 +241,4 @@ export const Button = ({
       </div>
     </>
   );
-}
+};

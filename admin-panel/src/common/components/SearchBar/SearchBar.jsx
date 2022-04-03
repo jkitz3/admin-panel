@@ -10,7 +10,8 @@ export const SearchBar = ({
   ...props
 }) => {
   const [searchbarInputEmptyValue, setSearchbarInputEmptyValue] = useState("");
-  const [searchbarInputCorrectValue, setSearchbarInputCorrectValue] = useState("50744");
+  const [searchbarInputCorrectValue, setSearchbarInputCorrectValue] =
+    useState("50744");
 
   const handleSearchbarInputEmptyValue = ({ target: { value } }) => {
     setSearchbarInputEmptyValue(value);
@@ -40,7 +41,12 @@ export const SearchBar = ({
             value={searchbarInputEmptyValue}
             onChange={handleSearchbarInputEmptyValue}
           />
-          {searchbarInputEmptyValue && <button className={cx(styles.button, styles.buttonXButton)} onClick={clearSearchbarInputEmptyValue}></button>}
+          {searchbarInputEmptyValue && (
+            <button
+              className={cx(styles.button, styles.buttonXButton)}
+              onClick={clearSearchbarInputEmptyValue}
+            ></button>
+          )}
         </div>
       </div>
       <div className={styles.blockSearchbar}>
@@ -53,10 +59,14 @@ export const SearchBar = ({
             value={searchbarInputCorrectValue}
             onChange={handleSearchbarInputCorrectValue}
           />
-          {searchbarInputCorrectValue && <button className={cx(styles.button, styles.buttonXButton)} onClick={clearSearchbarInputCorrectValue}></button>}
+          {searchbarInputCorrectValue && (
+            <button
+              className={cx(styles.button, styles.buttonXButton)}
+              onClick={clearSearchbarInputCorrectValue}
+            ></button>
+          )}
         </div>
       </div>
     </>
   );
-}
-
+};

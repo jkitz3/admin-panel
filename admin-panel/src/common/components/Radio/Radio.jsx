@@ -51,5 +51,4 @@ export const Radio = ({
       </div>
     </>
   );
-}
-
+};

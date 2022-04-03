@@ -7,7 +7,7 @@ export const Input = ({
   className,
   value,
   onChange,
-  isInputIncorrect=true,
+  isInputIncorrect = true,
   isInputDisabled,
   ...props
 }) => {
@@ -45,11 +45,12 @@ export const Input = ({
             value={inputEmptyValue}
             onChange={handleInputEmptyValue}
           />
-          {inputEmptyValue && <button
-            className={cx(styles.button, styles.buttonXButton)}
-            onClick={clearInputEmptyValue}
-          ></button>
-          }
+          {inputEmptyValue && (
+            <button
+              className={cx(styles.button, styles.buttonXButton)}
+              onClick={clearInputEmptyValue}
+            ></button>
+          )}
         </div>
       </div>
       <div className={styles.blockOrderDate}>
@@ -69,11 +70,12 @@ export const Input = ({
             value={inputIncorrectValue}
             onChange={handleInputIncorrectValue}
           />
-          {inputIncorrectValue && <button
-            className={cx(styles.button, styles.buttonXButton)}
-            onClick={clearInputIncorrectValue}
-          ></button>
-          }
+          {inputIncorrectValue && (
+            <button
+              className={cx(styles.button, styles.buttonXButton)}
+              onClick={clearInputIncorrectValue}
+            ></button>
+          )}
         </div>
       </div>
       <div className={styles.blockOrderDate}>
@@ -94,4 +96,4 @@ export const Input = ({
       </div>
     </>
   );
-}
+};

@@ -19,35 +19,51 @@ export const Dropdown = ({
   return (
     <>
       <div className={styles.dropdownWrapper}>
-        <div className={cx(styles.checkboxDropdown, styles.dropdownBlockCheckbox)}>
+        <div
+          className={cx(styles.checkboxDropdown, styles.dropdownBlockCheckbox)}
+        >
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
                   type="checkbox"
                   id="checkbox_new"
                 />
-                <label className={styles.checkboxContainer} htmlFor="checkbox_new">Новый</label>
+                <label
+                  className={styles.checkboxContainer}
+                  htmlFor="checkbox_new"
+                >
+                  Новый
+                </label>
               </div>
             </div>
           </div>
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
                   type="checkbox"
                   id="checkbox_calc"
                 />
-                <label className={styles.checkboxContainer} htmlFor="checkbox_calc"
-                  >Рассчет</label
+                <label
+                  className={styles.checkboxContainer}
+                  htmlFor="checkbox_calc"
                 >
+                  Рассчет
+                </label>
               </div>
             </div>
           </div>
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
@@ -58,13 +74,16 @@ export const Dropdown = ({
                 <label
                   className={styles.checkboxContainer}
                   htmlFor="checkbox_approved"
-                  >Подтвержден</label
                 >
+                  Подтвержден
+                </label>
               </div>
             </div>
           </div>
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
@@ -74,13 +93,16 @@ export const Dropdown = ({
                 <label
                   className={styles.checkboxContainer}
                   htmlFor="checkbox_delayed"
-                  >Отложен</label
                 >
+                  Отложен
+                </label>
               </div>
             </div>
           </div>
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
@@ -90,13 +112,16 @@ export const Dropdown = ({
                 <label
                   className={styles.checkboxContainer}
                   htmlFor="checkbox_completed"
-                  >Выполнен</label
                 >
+                  Выполнен
+                </label>
               </div>
             </div>
           </div>
           <div className={styles.checkboxDropdownItem}>
-            <div className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}>
+            <div
+              className={cx(styles.checkbox, styles.checkboxDropdownCheckbox)}
+            >
               <div className={styles.checkboxContent}>
                 <input
                   className={styles.checkboxInput}
@@ -106,8 +131,9 @@ export const Dropdown = ({
                 <label
                   className={styles.checkboxContainer}
                   htmlFor="checkbox_canceled"
-                  >Отменен</label
                 >
+                  Отменен
+                </label>
               </div>
             </div>
           </div>
@@ -123,10 +149,14 @@ export const Dropdown = ({
                   id="radio_new"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_new"
-                  >Новый</label
                 >
+                  Новый
+                </label>
               </div>
             </div>
           </div>
@@ -140,10 +170,14 @@ export const Dropdown = ({
                   id="radio_calc"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_calc"
-                  >Рассчет</label
                 >
+                  Рассчет
+                </label>
               </div>
             </div>
           </div>
@@ -158,10 +192,14 @@ export const Dropdown = ({
                   id="radio_approved"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_approved"
-                  >Подтвержден</label
                 >
+                  Подтвержден
+                </label>
               </div>
             </div>
           </div>
@@ -175,10 +213,14 @@ export const Dropdown = ({
                   id="radio_delayed"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_delayed"
-                  >Отложен</label
                 >
+                  Отложен
+                </label>
               </div>
             </div>
           </div>
@@ -192,10 +234,14 @@ export const Dropdown = ({
                   id="radio_completed"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_completed"
-                  >Выполнен</label
                 >
+                  Выполнен
+                </label>
               </div>
             </div>
           </div>
@@ -209,10 +255,14 @@ export const Dropdown = ({
                   id="radio_canceled"
                 />
                 <label
-                  className={cx(styles.radioContainer, styles.radioContainerNoIco)}
+                  className={cx(
+                    styles.radioContainer,
+                    styles.radioContainerNoIco
+                  )}
                   htmlFor="radio_canceled"
-                  >Отменен</label
                 >
+                  Отменен
+                </label>
               </div>
             </div>
           </div>
@@ -233,12 +283,24 @@ export const Dropdown = ({
         <div className={cx(styles.deleteRecord, styles.formBlockDeleteRecord)}>
           <span className={styles.deleteRecordTitle}>Удалить n записей?</span>
           <button
-            className={cx(styles.button, styles.buttonFullWidth, styles.deleteRecordButton, styles.buttonThemeLink, styles.buttonSizeSmall)}
+            className={cx(
+              styles.button,
+              styles.buttonFullWidth,
+              styles.deleteRecordButton,
+              styles.buttonThemeLink,
+              styles.buttonSizeSmall
+            )}
           >
             <span className={styles.buttonText}>Удалить</span>
           </button>
           <button
-            className={cx(styles.button, styles.buttonFullWidth, styles.deleteRecordButton, styles.buttonThemeBlue, styles.buttonSizeSmall)}
+            className={cx(
+              styles.button,
+              styles.buttonFullWidth,
+              styles.deleteRecordButton,
+              styles.buttonThemeBlue,
+              styles.buttonSizeSmall
+            )}
           >
             <span className={styles.buttonText}>Отмена</span>
           </button>
@@ -246,10 +308,20 @@ export const Dropdown = ({
         <div className={cx(styles.selectTheme, styles.formBlockSelectTheme)}>
           <span className={styles.selectThemeTitle}>Выберите тему</span>
           <button
-            className={cx(styles.button, styles.buttonFullWidth, styles.deleteRecordButton, styles.buttonThemeLink, styles.buttonSizeSmall)}
+            className={cx(
+              styles.button,
+              styles.buttonFullWidth,
+              styles.deleteRecordButton,
+              styles.buttonThemeLink,
+              styles.buttonSizeSmall
+            )}
           >
             <svg
-              className={cx(styles.icon, styles.selectThemeIcon, styles.selectThemeIconUnpushed)}
+              className={cx(
+                styles.icon,
+                styles.selectThemeIcon,
+                styles.selectThemeIconUnpushed
+              )}
               viewBox="0 0 16 16"
               fill="#459DF5"
               strok="none"
@@ -264,26 +336,27 @@ export const Dropdown = ({
                 d="M12.5 14H14L14 12.5L12.5 11L11 12.5L12.5 14Z"
                 stroke="none"
               />
-              <path
-                d="M2 3.5L2 2L3.5 2L5 3.5L3.5 5L2 3.5Z"
-                stroke="none"
-              />
-              <path
-                d="M3.5 14H2L2 12.5L3.5 11L5 12.5L3.5 14Z"
-                stroke="none"
-              />
-              <path
-                d="M14 3.5V2L12.5 2L11 3.5L12.5 5L14 3.5Z"
-                stroke="none"
-              />
+              <path d="M2 3.5L2 2L3.5 2L5 3.5L3.5 5L2 3.5Z" stroke="none" />
+              <path d="M3.5 14H2L2 12.5L3.5 11L5 12.5L3.5 14Z" stroke="none" />
+              <path d="M14 3.5V2L12.5 2L11 3.5L12.5 5L14 3.5Z" stroke="none" />
             </svg>
             <span className={styles.buttonText}>Светлая</span>
           </button>
           <button
-            className={cx(styles.button, styles.buttonFullWidth, styles.deleteRecordButton, styles.buttonThemeBlue, styles.buttonSizeSmall)}
+            className={cx(
+              styles.button,
+              styles.buttonFullWidth,
+              styles.deleteRecordButton,
+              styles.buttonThemeBlue,
+              styles.buttonSizeSmall
+            )}
           >
             <svg
-              className={cx(styles.icon, styles.selectThemeIcon, styles.selectThemeIconPushed)}
+              className={cx(
+                styles.icon,
+                styles.selectThemeIcon,
+                styles.selectThemeIconPushed
+              )}
               viewBox="0 0 16 16"
               fill="#8055FF"
               stroke="none"
@@ -300,5 +373,4 @@ export const Dropdown = ({
       </div>
     </>
   );
-}
-
+};
