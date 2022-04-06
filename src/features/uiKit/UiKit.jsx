@@ -16,34 +16,20 @@ export const UiKit = () => {
       <div className={styles.uiKitBlock}>
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
-          <Label 
-            labelValue="Дата и время заказа"
-            htmlFor="orderDateBlank"
-          />
-          <Input 
-            id="orderDateBlank" 
-            value=""
-            placeholder="Введите"
-          />
-          <Label 
+          <Label labelValue="Дата и время заказа" htmlFor="orderDateBlank" />
+          <Input id="orderDateBlank" value="" placeholder="Введите" />
+          <Label
             labelValue="Дата и время заказа"
             htmlFor="orderDateIncorrect"
           />
-          <Input 
-            id="orderDateIncorrect" 
+          <Input
+            id="orderDateIncorrect"
             value="06.12.2021"
             placeholder="Введите"
             isInputIncorrect
           />
-          <Label 
-            labelValue="Дата и время заказа"
-            htmlFor="orderDateDisabled"
-          />
-          <Input 
-            id="orderDateDisabled"
-            value="06.12.2021"
-            disabled
-          />
+          <Label labelValue="Дата и время заказа" htmlFor="orderDateDisabled" />
+          <Input id="orderDateDisabled" value="06.12.2021" disabled />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSearchbar)}>

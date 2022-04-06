@@ -40,10 +40,8 @@ export const Input = ({
           className={inputClassNames}
         />
         {inputValue && (
-          <button
-            onClick={clearInputValue}
-            className={styles.button}
-          ><SvgXMedium className={styles.buttonXButton} />
+          <button onClick={clearInputValue} className={styles.button}>
+            <SvgXMedium className={styles.buttonXButton} />
           </button>
         )}
         {disabled && <SvgLocked className={styles.orderDateIconDisabled} />}
