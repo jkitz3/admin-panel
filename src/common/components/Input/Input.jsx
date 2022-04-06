@@ -1,99 +1,53 @@
 import { useState } from "react";
+import { SvgLocked, SvgXMedium } from "../../iconComponents";
 import cx from "classnames";
 import styles from "./Input.module.css";
 
 export const Input = ({
-  children,
-  className,
+  id,
+  type,
   value,
-  onChange,
-  isInputIncorrect = true,
-  isInputDisabled,
+  placeholder,
+  disabled = false,
+  isInputIncorrect = false,
+  className,
   ...props
 }) => {
-  const [inputEmptyValue, setInputEmptyValue] = useState("");
-  const [inputIncorrectValue, setInputIncorrectValue] = useState("06.12.2021");
+  const [inputValue, setInputValue] = useState(value);
 
-  const handleInputEmptyValue = ({ target: { value } }) => {
-    setInputEmptyValue(value);
+  const handleInputValue = ({ target: { value } }) => {
+    setInputValue(value);
   };
 
-  const handleInputIncorrectValue = ({ target: { value } }) => {
-    setInputIncorrectValue(value);
+  const clearInputValue = () => {
+    setInputValue("");
   };
 
-  const clearInputEmptyValue = () => {
-    setInputEmptyValue("");
-  };
-
-  const clearInputIncorrectValue = () => {
-    setInputIncorrectValue("");
-  };
+  const inputClassNames = cx(styles.input, styles.orderDateInput, {
+    [styles.orderDateInputIncorrect]: isInputIncorrect,
+    [styles.orderDateInputDisabled]: disabled,
+  });
 
   return (
-    <>
-      <div className={styles.blockOrderDate}>
-        <label className={styles.orderDateTitle} htmlFor="orderDateBlank">
-          Дата и время заказа
-        </label>
-        <div className={styles.orderDateContent}>
-          <input
-            className={cx(styles.input, styles.orderDateInput)}
-            placeholder="Введите"
-            type="text"
-            id="orderDateBlank"
-            value={inputEmptyValue}
-            onChange={handleInputEmptyValue}
-          />
-          {inputEmptyValue && (
-            <button
-              className={cx(styles.button, styles.buttonXButton)}
-              onClick={clearInputEmptyValue}
-            ></button>
-          )}
-        </div>
+    <div className={styles.blockOrderDate}>
+      <div className={styles.orderDateContent}>
+        <input
+          id={id}
+          type={type}
+          value={inputValue}
+          placeholder={placeholder}
+          onChange={handleInputValue}
+          className={inputClassNames}
+        />
+        {inputValue && (
+          <button
+            onClick={clearInputValue}
+            className={styles.button}
+          ><SvgXMedium className={styles.buttonXButton} />
+          </button>
+        )}
+        {disabled && <SvgLocked className={styles.orderDateIconDisabled} />}
       </div>
-      <div className={styles.blockOrderDate}>
-        <label className={styles.orderDateTitle} htmlFor="orderDateIncorrect">
-          Дата и время заказа
-        </label>
-        <div className={styles.orderDateContent}>
-          <input
-            className={cx(
-              styles.input,
-              styles.orderDateInput,
-              inputIncorrectValue && styles.orderDateInputIncorrect
-            )}
-            placeholder="Введите"
-            type="text"
-            id="orderDateIncorrect"
-            value={inputIncorrectValue}
-            onChange={handleInputIncorrectValue}
-          />
-          {inputIncorrectValue && (
-            <button
-              className={cx(styles.button, styles.buttonXButton)}
-              onClick={clearInputIncorrectValue}
-            ></button>
-          )}
-        </div>
-      </div>
-      <div className={styles.blockOrderDate}>
-        <p className={styles.orderDateTitle}>Дата и время заказа</p>
-        <div className={styles.orderDateContent}>
-          <input
-            className={cx(
-              styles.input,
-              styles.orderDateInput,
-              styles.orderDateInputDisabled
-            )}
-            placeholder="Введите"
-            type="text"
-            defaultValue="06.12.2021"
-          />
-          <div className={styles.orderDateIconDisabled}></div>
-        </div>
-      </div>
-    </>
+    </div>
   );
 };

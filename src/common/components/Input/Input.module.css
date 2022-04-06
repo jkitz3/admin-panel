@@ -16,7 +16,6 @@
   height: 16px;
   top: 8px;
   left: 233px;
-  background-image: url(../../../icons/x-medium.svg);
 }
 .input {
   width: 100%;
@@ -40,6 +39,7 @@
 }
 .orderDateContent {
   position: relative;
+  height: 32px;
 }
 .orderDateInput {
   border: 1px solid #459df5;
@@ -59,13 +59,4 @@
   height: 16px;
   top: 8px;
   left: 233px;
-  background-image: url(../../../icons/locked.svg);
-  background-repeat: no-repeat;
-  background-color: unset;
-  border: unset;
-}
-.orderDateTitle {
-  margin-bottom: 8px;
-  display: inline-block;
-  width: 100%;
 }

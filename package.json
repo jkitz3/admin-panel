@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "svgr": "svgr --icon --replace-attr-values '#459DF5=currentColor' -d ./src/iconComponents ./src/icons"
   },
   "lint-staged": {
     "**/*.{js,json,css,html}": "prettier --write ."
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^6.2.1",
     "husky": "^7.0.4",
     "prettier": "^2.6.2"
   }
