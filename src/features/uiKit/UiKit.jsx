@@ -17,7 +17,13 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
           <Label labelValue="Дата и время заказа" htmlFor="orderDateBlank" />
-          <Input id="orderDateBlank" type="text" value="" placeholder="Введите" hasLabel/>
+          <Input
+            id="orderDateBlank"
+            type="text"
+            value=""
+            placeholder="Введите"
+            hasLabel
+          />
           <Label
             labelValue="Дата и время заказа"
             htmlFor="orderDateIncorrect"
@@ -31,14 +37,32 @@ export const UiKit = () => {
             hasLabel
           />
           <Label labelValue="Дата и время заказа" htmlFor="orderDateDisabled" />
-          <Input id="orderDateDisabled" type="text" value="06.12.2021" disabled hasLabel/>
+          <Input
+            id="orderDateDisabled"
+            type="text"
+            value="06.12.2021"
+            disabled
+            hasLabel
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSearchbar)}>
         <div className={styles.blockTitle}>SearchBar</div>
         <div className={styles.blockContent}>
-          <Input id="searchBar" type="text" value="" placeholder="Номер заказа или ФИО" inputIcon={SvgSearch} />
-          <Input id="searchBar" type="text" value="50744" placeholder="Номер заказа или ФИО" inputIcon={SvgSearch} />
+          <Input
+            id="searchBar"
+            type="text"
+            value=""
+            placeholder="Номер заказа или ФИО"
+            inputIcon={SvgSearch}
+          />
+          <Input
+            id="searchBar"
+            type="text"
+            value="50744"
+            placeholder="Номер заказа или ФИО"
+            inputIcon={SvgSearch}
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>

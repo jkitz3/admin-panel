@@ -20,7 +20,7 @@ export const Input = ({
   const handleInputValue = ({ target: { value } }) => {
     setInputValue(value);
   };
-  
+
   const clearInputValue = () => {
     setInputValue("");
   };
@@ -34,7 +34,7 @@ export const Input = ({
   return (
     <div className={hasLabel ? styles.block : styles.noLabelBlock}>
       <div className={styles.blockContent}>
-        {InputIcon && <InputIcon className={styles.inputIcon}/>}
+        {InputIcon && <InputIcon className={styles.inputIcon} />}
         <input
           id={id}
           type={type}

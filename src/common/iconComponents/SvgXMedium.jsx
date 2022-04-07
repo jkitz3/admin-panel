@@ -1,4 +1,4 @@
-export const SvgXMedium = ({ fill="none", stroke="#BAD8F5", ...props }) => (
+export const SvgXMedium = ({ fill = "none", stroke = "#BAD8F5", ...props }) => (
   <svg
     viewBox="0 0 16 16"
     fill={fill}

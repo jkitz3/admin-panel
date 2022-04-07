@@ -1,4 +1,4 @@
-export const SvgDot = ({ fill="#FFF", ...props }) => (
+export const SvgDot = ({ fill = "#FFF", ...props }) => (
   <svg
     viewBox="0 0 16 16"
     fill={fill}

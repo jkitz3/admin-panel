@@ -1,4 +1,4 @@
-export const SvgCheckmark = ({ fill="#459DF5", ...props }) => (
+export const SvgCheckmark = ({ fill = "#459DF5", ...props }) => (
   <svg
     viewBox="0 0 16 16"
     fill={fill}

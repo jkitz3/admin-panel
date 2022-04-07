@@ -1,4 +1,4 @@
-export const SvgLocked = ({ fill="#000", ...props }) => (
+export const SvgLocked = ({ fill = "#000", ...props }) => (
   <svg
     viewBox="0 0 16 16"
     fill={fill}
