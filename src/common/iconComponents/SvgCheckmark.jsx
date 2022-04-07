@@ -1,9 +1,7 @@
-import * as React from "react";
-
-export const SvgCheckmark = (props) => (
+export const SvgCheckmark = ({ fill="#459DF5", ...props }) => (
   <svg
     viewBox="0 0 16 16"
-    fill="#459DF5"
+    fill={fill}
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"

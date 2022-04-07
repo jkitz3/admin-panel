@@ -1,10 +1,8 @@
-import * as React from "react";
-
-export const SvgXMedium = (props) => (
+export const SvgXMedium = ({ fill="none", stroke="#BAD8F5", ...props }) => (
   <svg
     viewBox="0 0 16 16"
-    fill="none"
-    stroke="#BAD8F5"
+    fill={fill}
+    stroke={stroke}
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"

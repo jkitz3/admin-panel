@@ -1,9 +1,7 @@
-import * as React from "react";
-
-export const SvgLocked = (props) => (
+export const SvgLocked = ({ fill="#000", ...props }) => (
   <svg
     viewBox="0 0 16 16"
-    fill="#000"
+    fill={fill}
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"

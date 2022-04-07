@@ -28,6 +28,7 @@
 .blockContent {
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
 }
 .uiKitBlockSearchbar {
   width: 354px;

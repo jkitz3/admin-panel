@@ -10,7 +10,7 @@
 .button:focus {
   outline: none;
 }
-.buttonXButton {
+.xButton {
   width: 16px;
   position: absolute;
   height: 16px;
@@ -21,6 +21,8 @@
   width: 100%;
   min-height: 32px;
   border-radius: 4px;
+  border: 1px solid #459df5;
+  padding: 0 32px 0 8px;
 }
 .input:focus {
   outline: none;
@@ -31,32 +33,45 @@
 .input::-webkit-input-placeholder {
   color: #bad8f5;
 }
-.blockOrderDate {
+.block {
   margin-bottom: 22px;
 }
-.blockOrderDate:last-child {
+.block:last-child {
   margin-bottom: 0px;
 }
-.orderDateContent {
+.noLabelBlock {
+  margin-bottom: 32px;
+}
+.noLabelBlock:last-child {
+  margin-bottom: 0px;
+}
+.blockContent {
   position: relative;
   height: 32px;
 }
-.orderDateInput {
-  border: 1px solid #459df5;
-  padding: 0 32px 0 8px;
-}
-.orderDateInputIncorrect {
+.inputIncorrect {
   border-color: #f53152;
 }
-.orderDateInputDisabled {
+.inputDisabled {
   background-color: #bad8f5;
   cursor: not-allowed;
   pointer-events: none;
 }
-.orderDateIconDisabled {
+.iconDisabled {
   position: absolute;
   width: 16px;
   height: 16px;
   top: 8px;
   left: 233px;
+}
+.inputIcon {
+  width: 16px;
+  position: absolute;
+  height: 16px;
+  top: 8px;
+  left: 9px;
+  border: unset;
+}
+.inputWithIcon {
+  padding-left: 32px;
 }

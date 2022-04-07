@@ -1,9 +1,7 @@
-import * as React from "react";
-
-export const SvgDot = (props) => (
+export const SvgDot = ({ fill="#FFF", ...props }) => (
   <svg
     viewBox="0 0 16 16"
-    fill="#FFF"
+    fill={fill}
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"

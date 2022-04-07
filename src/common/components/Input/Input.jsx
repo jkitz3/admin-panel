@@ -8,8 +8,10 @@ export const Input = ({
   type,
   value,
   placeholder,
-  disabled = false,
-  isInputIncorrect = false,
+  disabled,
+  isInputIncorrect,
+  inputIcon: InputIcon,
+  hasLabel,
   className,
   ...props
 }) => {
@@ -18,19 +20,21 @@ export const Input = ({
   const handleInputValue = ({ target: { value } }) => {
     setInputValue(value);
   };
-
+  
   const clearInputValue = () => {
     setInputValue("");
   };
 
-  const inputClassNames = cx(styles.input, styles.orderDateInput, {
-    [styles.orderDateInputIncorrect]: isInputIncorrect,
-    [styles.orderDateInputDisabled]: disabled,
+  const inputClassNames = cx(styles.input, {
+    [styles.inputDisabled]: disabled,
+    [styles.inputIncorrect]: isInputIncorrect,
+    [styles.inputWithIcon]: InputIcon,
   });
 
   return (
-    <div className={styles.blockOrderDate}>
-      <div className={styles.orderDateContent}>
+    <div className={hasLabel ? styles.block : styles.noLabelBlock}>
+      <div className={styles.blockContent}>
+        {InputIcon && <InputIcon className={styles.inputIcon}/>}
         <input
           id={id}
           type={type}
@@ -41,10 +45,10 @@ export const Input = ({
         />
         {inputValue && (
           <button onClick={clearInputValue} className={styles.button}>
-            <SvgXMedium className={styles.buttonXButton} />
+            <SvgXMedium className={styles.xButton} />
           </button>
         )}
-        {disabled && <SvgLocked className={styles.orderDateIconDisabled} />}
+        {disabled && <SvgLocked className={styles.iconDisabled} />}
       </div>
     </div>
   );

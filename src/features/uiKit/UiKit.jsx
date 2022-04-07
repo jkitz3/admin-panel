@@ -3,12 +3,12 @@ import styles from "./UiKit.module.css";
 import {
   Label,
   Input,
-  SearchBar,
   Checkbox,
   Radio,
   Button,
   Dropdown,
 } from "../../common/components";
+import { SvgSearch } from "../../common/iconComponents";
 
 export const UiKit = () => {
   return (
@@ -17,25 +17,28 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
           <Label labelValue="Дата и время заказа" htmlFor="orderDateBlank" />
-          <Input id="orderDateBlank" value="" placeholder="Введите" />
+          <Input id="orderDateBlank" type="text" value="" placeholder="Введите" hasLabel/>
           <Label
             labelValue="Дата и время заказа"
             htmlFor="orderDateIncorrect"
           />
           <Input
             id="orderDateIncorrect"
+            type="text"
             value="06.12.2021"
             placeholder="Введите"
             isInputIncorrect
+            hasLabel
           />
           <Label labelValue="Дата и время заказа" htmlFor="orderDateDisabled" />
-          <Input id="orderDateDisabled" value="06.12.2021" disabled />
+          <Input id="orderDateDisabled" type="text" value="06.12.2021" disabled hasLabel/>
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSearchbar)}>
         <div className={styles.blockTitle}>SearchBar</div>
         <div className={styles.blockContent}>
-          <SearchBar />
+          <Input id="searchBar" type="text" value="" placeholder="Номер заказа или ФИО" inputIcon={SvgSearch} />
+          <Input id="searchBar" type="text" value="50744" placeholder="Номер заказа или ФИО" inputIcon={SvgSearch} />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>
