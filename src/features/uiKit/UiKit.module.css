@@ -57,3 +57,36 @@
   min-width: 674px;
   padding: 48px;
 }
+.blockButtonBlock {
+  margin-right: 48px;
+}
+.blockButtonBlock:last-child {
+  margin-right: 0;
+}
+.buttonBlockContent {
+  display: flex;
+  flex-direction: column;
+}
+.buttonBlockWrapper {
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+.buttonBlockWrapper:last-child {
+  margin-bottom: 0;
+}
+.buttonBlockWrapper:nth-child(2n) {
+  height: 104px;
+}
+.dropdownWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 96px;
+}
+.dropdownWrapper:last-child {
+  margin-bottom: 0;
+}

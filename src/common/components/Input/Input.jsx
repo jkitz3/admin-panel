@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { SvgLocked, SvgXMedium } from "../../iconComponents";
 import cx from "classnames";
 import styles from "./Input.module.css";
+import { Locked, XMedium } from "../../../icons";
 
 export const Input = ({
   id,
@@ -45,10 +45,10 @@ export const Input = ({
         />
         {inputValue && (
           <button onClick={clearInputValue} className={styles.button}>
-            <SvgXMedium className={styles.xButton} />
+            <XMedium className={styles.xButton} />
           </button>
         )}
-        {disabled && <SvgLocked className={styles.iconDisabled} />}
+        {disabled && <Locked className={styles.iconDisabled} />}
       </div>
     </div>
   );

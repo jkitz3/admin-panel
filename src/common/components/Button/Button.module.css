@@ -10,45 +10,21 @@
 .button:focus {
   outline: none;
 }
-.blockButtonBlock {
-  margin-right: 48px;
-}
-.blockButtonBlock:last-child {
-  margin-right: 0;
-}
-.buttonBlockContent {
-  display: flex;
-  flex-direction: column;
-}
-.buttonBlockWrapper {
-  height: 128px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 48px;
-}
-.buttonBlockWrapper:last-child {
-  margin-bottom: 0;
-}
-.buttonBlockWrapper:nth-child(2n) {
-  height: 104px;
-}
 .buttonThemeBlue {
   border: 1px solid #459df5;
   background-color: #459df5;
   color: #fff;
 }
-.buttonThemeBlue .icon {
+.buttonThemeBlue .buttonIcon {
   fill: #fff;
 }
 .buttonThemeLink {
   color: #459df5;
 }
-.buttonThemeLink .icon {
+.buttonThemeLink .buttonIcon {
   fill: #459df5;
 }
-.buttonThemeText .icon {
+.buttonThemeText .buttonIcon {
   fill: #000;
 }
 .buttonSizeDefault {
@@ -63,10 +39,13 @@
 .buttonSizeSmall + .buttonIconOnly {
   padding: 4px 4px;
 }
-.icon {
+.buttonIcon {
   width: 16px;
   height: 16px;
 }
-.icon + .buttonText {
+.buttonIcon + .buttonText {
   margin-left: 8px;
+}
+.button_size_small > .buttonIcon + .button__text {
+  margin-left: 4px;
 }

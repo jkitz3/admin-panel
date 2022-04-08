@@ -8,7 +8,7 @@ import {
   Button,
   Dropdown,
 } from "../../common/components";
-import { SvgSearch } from "../../common/iconComponents";
+import { Search, DotLarge } from "../../icons";
 
 export const UiKit = () => {
   return (
@@ -54,14 +54,14 @@ export const UiKit = () => {
             type="text"
             value=""
             placeholder="Номер заказа или ФИО"
-            inputIcon={SvgSearch}
+            inputIcon={Search}
           />
           <Input
             id="searchBar"
             type="text"
             value="50744"
             placeholder="Номер заказа или ФИО"
-            inputIcon={SvgSearch}
+            inputIcon={Search}
           />
         </div>
       </div>
@@ -70,7 +70,15 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Checkbox />
+          <Checkbox 
+            id="checkbox_1"
+            type="checkbox"
+            isCheckboxChecked                        
+          />
+          <Checkbox 
+            id="checkbox_2"
+            type="checkbox"
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>
@@ -78,7 +86,17 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Radio />
+          <Radio 
+            id="radio_1"
+            name="radio-name"
+            type="radio"
+          />
+          <Radio 
+            id="radio_2"
+            name="radio-name"
+            type="radio"
+            isRadioChecked
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockButtonBlock)}>
@@ -86,13 +104,197 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentButtonBlock)}
         >
-          <Button />
+          <div className={styles.blockButtonBlock}>
+            <div className={styles.buttonBlockContent}>
+              <div className={styles.buttonBlockWrapper}>
+                <Button 
+                  value="Text here"
+                  themeBlue
+                  sizeDefault
+                  buttonIcon={DotLarge}
+                />
+                <Button
+                  value="Text here" 
+                  themeBlue
+                  sizeDefault
+                />
+                <Button 
+                  themeBlue
+                  sizeDefault
+                  iconOnly
+                  buttonIcon={DotLarge}
+                />
+              </div>
+              <div className={styles.buttonBlockWrapper}>
+                <Button 
+                  value="Text here" 
+                  themeBlue
+                  sizeSmall
+                  buttonIcon={DotLarge}
+                />
+                <Button 
+                  value="Text here" 
+                  themeBlue
+                  sizeSmall
+                />
+                <Button 
+                  themeBlue
+                  sizeSmall
+                  iconOnly
+                  buttonIcon={DotLarge}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.blockButtonBlock}>
+            <div className={styles.buttonBlockContent}>
+              <div className={styles.buttonBlockWrapper}>
+                <Button 
+                  value="Text here"
+                  themeLink
+                  sizeDefault
+                  buttonIcon={DotLarge}
+                />
+                <Button
+                  value="Text here" 
+                  themeLink
+                  sizeDefault
+                />
+                <Button 
+                  themeLink
+                  sizeDefault
+                  iconOnly
+                  buttonIcon={DotLarge}
+                />
+              </div>
+              <div className={styles.buttonBlockWrapper}>
+                <Button 
+                  value="Text here" 
+                  themeLink
+                  sizeSmall
+                  buttonIcon={DotLarge}
+                />
+                <Button 
+                  value="Text here" 
+                  themeLink
+                  sizeSmall
+                />
+                <Button 
+                  themeLink
+                  sizeSmall
+                  iconOnly
+                  buttonIcon={DotLarge}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.blockButtonBlock}>
+            <div className={styles.buttonBlockContent}>
+              <div className={styles.buttonBlockWrapper}>
+                <Button 
+                  value="Text here"
+                  themeText
+                  sizeDefault
+                  buttonIcon={DotLarge}
+                />
+                <Button
+                  value="Text here" 
+                  themeText
+                  sizeDefault
+                />
+                <Button 
+                  themeText
+                  sizeDefault
+                  iconOnly
+                  buttonIcon={DotLarge}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockDropdown)}>
         <div className={styles.blockTitle}>Dropdown</div>
         <div className={styles.blockContent}>
-          <Dropdown />
+          <div className={styles.dropdownWrapper}>
+            <Dropdown>
+              <Checkbox 
+                id="checkbox_new"
+                type="checkbox"
+                labelValue="Новый"
+              />
+              <Checkbox 
+                id="checkbox_calc"
+                type="checkbox"
+                labelValue="Рассчет"
+              />
+              <Checkbox 
+                id="checkbox_approved"
+                type="checkbox"
+                labelValue="Подтвержден"
+                isCheckboxChecked
+              />
+              <Checkbox 
+                id="checkbox_delayed"
+                type="checkbox"
+                labelValue="Отложен"
+              />
+              <Checkbox 
+                id="checkbox_completed"
+                type="checkbox"
+                labelValue="Выполнен"
+              />
+              <Checkbox 
+                id="checkbox_canceled"
+                type="checkbox"
+                labelValue="Отменен"
+              />
+            </Dropdown>
+            <Dropdown>
+              <Radio 
+              id="radio_new"
+              name="radio-dropdown"
+              type="radio"
+              labelValue="Новый"
+              />
+              <Radio 
+                id="radio_calc"
+                name="radio-dropdown"
+                type="radio"
+                labelValue="Рассчет"
+              />
+              <Radio 
+                id="radio_approved"
+                name="radio-dropdown"
+                type="radio"
+                labelValue="Подтвержден"
+                isRadioChecked
+              />
+              <Radio 
+                id="radio_delayed"
+                name="radio-dropdown"
+                type="radio"
+                labelValue="Отложен"
+              />
+              <Radio 
+                id="radio_completed"
+                name="radio-dropdown"
+                type="radio"
+                labelValue="Выполнен"
+              />
+              <Radio 
+                id="radio_canceled"
+                name="radio-dropdown"
+                type="radio"
+                labelValue="Отменен"
+              />
+            </Dropdown> 
+          </div>
+          <div className={styles.dropdownWrapper}>
+            <Dropdown />
+            <Dropdown />
+            <Dropdown />
+          </div>
         </div>
       </div>
     </div>

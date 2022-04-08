@@ -8,14 +8,15 @@
   width: 16px;
   height: 16px;
 }
-.radioContainer {
+.radioLabel {
   display: inline-block;
   width: 100%;
   min-height: 16px;
   position: relative;
+  padding: 0 0 16px 24px;
   cursor: pointer;
 }
-.radioContainer::before {
+.radioLabel::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -28,7 +29,7 @@
   border-radius: 50%;
   background-color: #fff;
 }
-.radioContainer::after {
+.radioLabel::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -50,10 +51,10 @@
   display: none;
   position: absolute;
 }
-.radioInput:checked + .radioContainer::before {
+.radioInput:checked + .radioLabel::before {
   background-color: #459df5;
 }
-.radioInput:checked + .radioContainer::after {
+.radioInput:checked + .radioLabel::after {
   opacity: 1;
   border: none;
 }

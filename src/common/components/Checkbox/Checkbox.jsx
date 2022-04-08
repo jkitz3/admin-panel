@@ -3,56 +3,37 @@ import cx from "classnames";
 import styles from "./Checkbox.module.css";
 
 export const Checkbox = ({
-  children,
-  className,
-  value,
+  id,
+  type,
   onChange,
-  isCheckboxChecked,
+  labelValue,
+  isCheckboxChecked = false,
+  className,
   ...props
 }) => {
-  const [checkboxOneChecked, setCheckboxOneChecked] = useState("checked");
-  const [checkboxTwoChecked, setCheckboxTwoChecked] = useState("");
+  const [checkboxChecked, setCheckboxChecked] = useState(isCheckboxChecked);
 
-  const handleCheckboxOne = ({ target: { checked } }) => {
-    setCheckboxOneChecked(checked);
-  };
-
-  const handleCheckboxTwo = ({ target: { checked } }) => {
-    setCheckboxTwoChecked(checked);
+  const handleCheckbox = ({ target: { checked } }) => {
+    setCheckboxChecked(checked);
   };
 
   return (
-    <>
-      <div className={cx(styles.checkbox, styles.blockCheckbox)}>
-        <div className={styles.checkboxContent}>
-          <input
-            className={styles.checkboxInput}
-            type="checkbox"
-            checked={checkboxOneChecked}
-            onChange={handleCheckboxOne}
-            id="checkbox_1"
-          />
-          <label
-            className={styles.checkboxContainer}
-            htmlFor="checkbox_1"
-          ></label>
-        </div>
+    <div className={cx(styles.checkbox, styles.blockCheckbox)}>
+      <div className={styles.checkboxContent}>
+        <input
+          id={id}
+          type={type}
+          checked={checkboxChecked}
+          onChange={handleCheckbox}
+          className={styles.checkboxInput}
+        />
+        <label
+          className={styles.checkboxLabel}
+          htmlFor={id}
+        >
+          {labelValue}
+        </label>
       </div>
-      <div className={cx(styles.checkbox, styles.blockCheckbox)}>
-        <div className={styles.checkboxContent}>
-          <input
-            className={styles.checkboxInput}
-            type="checkbox"
-            checked={checkboxTwoChecked}
-            onChange={handleCheckboxTwo}
-            id="checkbox_2"
-          />
-          <label
-            className={styles.checkboxContainer}
-            htmlFor="checkbox_2"
-          ></label>
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
