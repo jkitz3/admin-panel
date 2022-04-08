@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 
 export const Button = ({
   value,
-  onClick=()=>{},
+  onClick = () => {},
   themeBlue,
   themeLink,
   themeText,
@@ -26,11 +26,8 @@ export const Button = ({
   });
 
   return (
-    <button
-      onClick={onClick}
-      className={buttonClassNames}
-    >
-      {ButtonIcon && <ButtonIcon className={styles.buttonIcon}/>}
+    <button onClick={onClick} className={buttonClassNames}>
+      {ButtonIcon && <ButtonIcon className={styles.buttonIcon} />}
       {!iconOnly && <span className={styles.buttonText}>{value}</span>}
     </button>
   );
