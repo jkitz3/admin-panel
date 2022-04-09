@@ -6,7 +6,7 @@ import { Locked, XMedium } from "../../../icons";
 export const Input = ({
   id,
   type,
-  value="",
+  value = "",
   placeholder,
   disabled,
   isInputIncorrect,

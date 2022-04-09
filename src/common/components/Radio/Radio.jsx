@@ -30,7 +30,16 @@ export const Radio = ({
           onChange={handleRadio}
           className={styles.radioInput}
         />
-        <label className={noIco ? cx(styles.radioLabel, styles.radioLabelNoIco) : styles.radioLabel} htmlFor={id}>{labelValue}</label> 
+        <label
+          className={
+            noIco
+              ? cx(styles.radioLabel, styles.radioLabelNoIco)
+              : styles.radioLabel
+          }
+          htmlFor={id}
+        >
+          {labelValue}
+        </label>
       </div>
     </div>
   );

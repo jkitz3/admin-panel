@@ -185,7 +185,7 @@ export const UiKit = () => {
                 labelValue="Отменен"
               />
             </Dropdown>
-            <Dropdown isCheckboxRadioDropdown >
+            <Dropdown isCheckboxRadioDropdown>
               <Radio
                 id="radio_new"
                 name="radio-dropdown"
@@ -236,12 +236,24 @@ export const UiKit = () => {
               <Input placeholder="Введите номер" hasXButton={false} />
             </Dropdown>
             <Dropdown dropdownTitle="Удалить n записей?">
-              <Button value="Удалить" themeLink sizeSmall isFullWidth/>
-              <Button value="Отмена" themeBlue sizeSmall isFullWidth/>
+              <Button value="Удалить" themeLink sizeSmall isFullWidth />
+              <Button value="Отмена" themeBlue sizeSmall isFullWidth />
             </Dropdown>
             <Dropdown dropdownTitle="Выберите тему">
-              <Button value="Светлая" themeLink sizeSmall isFullWidth buttonIcon={Sun}/>
-              <Button value="Темная" themeBlue sizeSmall isFullWidth buttonIcon={Moon}/>
+              <Button
+                value="Светлая"
+                themeLink
+                sizeSmall
+                isFullWidth
+                buttonIcon={Sun}
+              />
+              <Button
+                value="Темная"
+                themeBlue
+                sizeSmall
+                isFullWidth
+                buttonIcon={Moon}
+              />
             </Dropdown>
           </div>
         </div>
