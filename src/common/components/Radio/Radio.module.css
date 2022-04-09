@@ -1,11 +1,5 @@
-.blockRadio {
-  margin-right: 24px;
-}
-.blockRadio:last-child {
-  margin-right: 0;
-}
 .radioContent {
-  width: 16px;
+  width: 100%;
   height: 16px;
 }
 .radioLabel {
@@ -43,9 +37,23 @@
   background-repeat: no-repeat;
   opacity: 0;
 }
+.radioLabelNoIco {
+  padding-left: 0;
+}
+.radioLabelNoIco::before {
+  display: none;
+}
+.radioLabelNoIco::after {
+  display: none;
+}
 .radio {
   height: 16px;
+  width: 100%;
   min-width: 16px;
+  margin-right: 24px;
+}
+.radio:last-child {
+  margin-right: 0px;
 }
 .radioInput {
   display: none;
@@ -58,7 +66,6 @@
   opacity: 1;
   border: none;
 }
-.radioDropdownItem,
-.radioDropdownRadio {
-  width: 100%;
+input[type="radio"]:checked + label {
+  color: #459df5;
 }

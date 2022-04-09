@@ -24,6 +24,9 @@
   border: 1px solid #459df5;
   padding: 0 32px 0 8px;
 }
+.inputNoXButton {
+  padding: 0 4px 0 8px;
+}
 .input:focus {
   outline: none;
 }

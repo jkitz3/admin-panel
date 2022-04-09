@@ -10,6 +10,7 @@ export const Button = ({
   sizeDefault,
   sizeSmall,
   iconOnly,
+  isFullWidth = false,
   buttonIcon: ButtonIcon,
   isButtonClicked,
   isButtonVisible,
@@ -23,6 +24,7 @@ export const Button = ({
     [styles.buttonSizeDefault]: sizeDefault,
     [styles.buttonSizeSmall]: sizeSmall,
     [styles.buttonIconOnly]: iconOnly,
+    [styles.buttonFullWidth]: isFullWidth,
   });
 
   return (

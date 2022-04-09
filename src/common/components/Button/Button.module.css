@@ -6,6 +6,10 @@
   border-radius: 4px;
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+.button:last-child {
+  margin-bottom: 0;
 }
 .button:focus {
   outline: none;
@@ -48,4 +52,9 @@
 }
 .button_size_small > .buttonIcon + .button__text {
   margin-left: 4px;
+}
+.buttonFullWidth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

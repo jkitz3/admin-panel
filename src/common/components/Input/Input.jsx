@@ -6,12 +6,13 @@ import { Locked, XMedium } from "../../../icons";
 export const Input = ({
   id,
   type,
-  value,
+  value="",
   placeholder,
   disabled,
   isInputIncorrect,
   inputIcon: InputIcon,
   hasLabel,
+  hasXButton = true,
   className,
   ...props
 }) => {
@@ -29,6 +30,7 @@ export const Input = ({
     [styles.inputDisabled]: disabled,
     [styles.inputIncorrect]: isInputIncorrect,
     [styles.inputWithIcon]: InputIcon,
+    [styles.inputNoXButton]: !hasXButton,
   });
 
   return (
@@ -43,7 +45,7 @@ export const Input = ({
           onChange={handleInputValue}
           className={inputClassNames}
         />
-        {inputValue && (
+        {inputValue && hasXButton && (
           <button onClick={clearInputValue} className={styles.button}>
             <XMedium className={styles.xButton} />
           </button>

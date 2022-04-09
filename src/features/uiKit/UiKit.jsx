@@ -8,7 +8,7 @@ import {
   Button,
   Dropdown,
 } from "../../common/components";
-import { Search, DotLarge } from "../../icons";
+import { DotLarge, Moon, Search, Sun } from "../../icons";
 
 export const UiKit = () => {
   return (
@@ -156,7 +156,7 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Dropdown</div>
         <div className={styles.blockContent}>
           <div className={styles.dropdownWrapper}>
-            <Dropdown>
+            <Dropdown isCheckboxRadioDropdown>
               <Checkbox id="checkbox_new" type="checkbox" labelValue="Новый" />
               <Checkbox
                 id="checkbox_calc"
@@ -185,18 +185,20 @@ export const UiKit = () => {
                 labelValue="Отменен"
               />
             </Dropdown>
-            <Dropdown>
+            <Dropdown isCheckboxRadioDropdown >
               <Radio
                 id="radio_new"
                 name="radio-dropdown"
                 type="radio"
                 labelValue="Новый"
+                noIco
               />
               <Radio
                 id="radio_calc"
                 name="radio-dropdown"
                 type="radio"
                 labelValue="Рассчет"
+                noIco
               />
               <Radio
                 id="radio_approved"
@@ -204,31 +206,43 @@ export const UiKit = () => {
                 type="radio"
                 labelValue="Подтвержден"
                 isRadioChecked
+                noIco
               />
               <Radio
                 id="radio_delayed"
                 name="radio-dropdown"
                 type="radio"
                 labelValue="Отложен"
+                noIco
               />
               <Radio
                 id="radio_completed"
                 name="radio-dropdown"
                 type="radio"
                 labelValue="Выполнен"
+                noIco
               />
               <Radio
                 id="radio_canceled"
                 name="radio-dropdown"
                 type="radio"
                 labelValue="Отменен"
+                noIco
               />
             </Dropdown>
           </div>
           <div className={styles.dropdownWrapper}>
-            <Dropdown />
-            <Dropdown />
-            <Dropdown />
+            <Dropdown dropdownTitle="Номер страницы">
+              <Input placeholder="Введите номер" hasXButton={false} />
+            </Dropdown>
+            <Dropdown dropdownTitle="Удалить n записей?">
+              <Button value="Удалить" themeLink sizeSmall isFullWidth/>
+              <Button value="Отмена" themeBlue sizeSmall isFullWidth/>
+            </Dropdown>
+            <Dropdown dropdownTitle="Выберите тему">
+              <Button value="Светлая" themeLink sizeSmall isFullWidth buttonIcon={Sun}/>
+              <Button value="Темная" themeBlue sizeSmall isFullWidth buttonIcon={Moon}/>
+            </Dropdown>
           </div>
         </div>
       </div>
