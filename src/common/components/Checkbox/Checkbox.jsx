@@ -4,7 +4,7 @@ import styles from "./Checkbox.module.css";
 
 export const Checkbox = ({
   id,
-  type="checkbox",
+  type = "checkbox",
   onChange,
   labelValue,
   isCheckboxChecked = false,

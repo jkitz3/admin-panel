@@ -5,7 +5,7 @@ import { Locked, XMedium } from "../../../icons";
 
 export const Input = ({
   id,
-  type="text",
+  type = "text",
   value = "",
   placeholder,
   disabled,

@@ -17,15 +17,10 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
           <InputLabel htmlFor="orderDateBlank">Дата и время заказа</InputLabel>
-          <Input
-            id="orderDateBlank"
-            value=""
-            placeholder="Введите"
-            hasLabel
-          />
-          <InputLabel
-            htmlFor="orderDateIncorrect"
-          >Дата и время заказа</InputLabel>
+          <Input id="orderDateBlank" value="" placeholder="Введите" hasLabel />
+          <InputLabel htmlFor="orderDateIncorrect">
+            Дата и время заказа
+          </InputLabel>
           <Input
             id="orderDateIncorrect"
             value="06.12.2021"
@@ -33,13 +28,10 @@ export const UiKit = () => {
             isInputIncorrect
             hasLabel
           />
-          <InputLabel htmlFor="orderDateDisabled">Дата и время заказа</InputLabel>
-          <Input
-            id="orderDateDisabled"
-            value="06.12.2021"
-            disabled
-            hasLabel
-          />
+          <InputLabel htmlFor="orderDateDisabled">
+            Дата и время заказа
+          </InputLabel>
+          <Input id="orderDateDisabled" value="06.12.2021" disabled hasLabel />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSearchbar)}>
@@ -85,23 +77,21 @@ export const UiKit = () => {
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button
-                  themeBlue
-                  sizeDefault
-                  buttonIcon={DotLarge}
-                >
+                <Button themeBlue sizeDefault buttonIcon={DotLarge}>
                   Text here
                 </Button>
-                <Button themeBlue sizeDefault>Text here</Button>
+                <Button themeBlue sizeDefault>
+                  Text here
+                </Button>
                 <Button themeBlue sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
               <div className={styles.buttonBlockWrapper}>
-                <Button
-                  themeBlue
-                  sizeSmall
-                  buttonIcon={DotLarge}
-                  >Text here</Button>
-                <Button themeBlue sizeSmall>Text here</Button>
+                <Button themeBlue sizeSmall buttonIcon={DotLarge}>
+                  Text here
+                </Button>
+                <Button themeBlue sizeSmall>
+                  Text here
+                </Button>
                 <Button themeBlue sizeSmall iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -109,21 +99,21 @@ export const UiKit = () => {
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button
-                  themeLink
-                  sizeDefault
-                  buttonIcon={DotLarge}
-                >Text here</Button>
-                <Button themeLink sizeDefault>Text here</Button>
+                <Button themeLink sizeDefault buttonIcon={DotLarge}>
+                  Text here
+                </Button>
+                <Button themeLink sizeDefault>
+                  Text here
+                </Button>
                 <Button themeLink sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
               <div className={styles.buttonBlockWrapper}>
-                <Button
-                  themeLink
-                  sizeSmall
-                  buttonIcon={DotLarge}
-                >Text here</Button>
-                <Button themeLink sizeSmall>Text here</Button>
+                <Button themeLink sizeSmall buttonIcon={DotLarge}>
+                  Text here
+                </Button>
+                <Button themeLink sizeSmall>
+                  Text here
+                </Button>
                 <Button themeLink sizeSmall iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -131,12 +121,12 @@ export const UiKit = () => {
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button
-                  themeText
-                  sizeDefault
-                  buttonIcon={DotLarge}
-                >Text here</Button>
-                <Button themeText sizeDefault>Text here</Button>
+                <Button themeText sizeDefault buttonIcon={DotLarge}>
+                  Text here
+                </Button>
+                <Button themeText sizeDefault>
+                  Text here
+                </Button>
                 <Button themeText sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -149,27 +139,15 @@ export const UiKit = () => {
           <div className={styles.dropdownWrapper}>
             <Dropdown isCheckboxRadioDropdown>
               <Checkbox id="checkbox_new" labelValue="Новый" />
-              <Checkbox
-                id="checkbox_calc"
-                labelValue="Рассчет"
-              />
+              <Checkbox id="checkbox_calc" labelValue="Рассчет" />
               <Checkbox
                 id="checkbox_approved"
                 labelValue="Подтвержден"
                 isCheckboxChecked
               />
-              <Checkbox
-                id="checkbox_delayed"
-                labelValue="Отложен"
-              />
-              <Checkbox
-                id="checkbox_completed"
-                labelValue="Выполнен"
-              />
-              <Checkbox
-                id="checkbox_canceled"
-                labelValue="Отменен"
-              />
+              <Checkbox id="checkbox_delayed" labelValue="Отложен" />
+              <Checkbox id="checkbox_completed" labelValue="Выполнен" />
+              <Checkbox id="checkbox_canceled" labelValue="Отменен" />
             </Dropdown>
             <Dropdown isCheckboxRadioDropdown>
               <Radio
@@ -216,22 +194,20 @@ export const UiKit = () => {
               <Input placeholder="Введите номер" hasXButton={false} />
             </Dropdown>
             <Dropdown dropdownTitle="Удалить n записей?">
-              <Button themeLink sizeSmall isFullWidth>Удалить</Button>
-              <Button themeBlue sizeSmall isFullWidth>Отмена</Button>
+              <Button themeLink sizeSmall isFullWidth>
+                Удалить
+              </Button>
+              <Button themeBlue sizeSmall isFullWidth>
+                Отмена
+              </Button>
             </Dropdown>
             <Dropdown dropdownTitle="Выберите тему">
-              <Button
-                themeLink
-                sizeSmall
-                isFullWidth
-                buttonIcon={Sun}
-              >Светлая</Button>
-              <Button
-                themeBlue
-                sizeSmall
-                isFullWidth
-                buttonIcon={Moon}
-              >Темная</Button>
+              <Button themeLink sizeSmall isFullWidth buttonIcon={Sun}>
+                Светлая
+              </Button>
+              <Button themeBlue sizeSmall isFullWidth buttonIcon={Moon}>
+                Темная
+              </Button>
             </Dropdown>
           </div>
         </div>
