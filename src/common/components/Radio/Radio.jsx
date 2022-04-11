@@ -5,7 +5,7 @@ import styles from "./Radio.module.css";
 export const Radio = ({
   id,
   name,
-  type,
+  type="radio",
   onChange,
   labelValue,
   isRadioChecked = false,

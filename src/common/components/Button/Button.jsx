@@ -2,8 +2,6 @@ import cx from "classnames";
 import styles from "./Button.module.css";
 
 export const Button = ({
-  value,
-  onClick = () => {},
   themeBlue,
   themeLink,
   themeText,
@@ -14,6 +12,8 @@ export const Button = ({
   buttonIcon: ButtonIcon,
   isButtonClicked,
   isButtonVisible,
+  onClick = () => {},
+  children,
   className,
   ...props
 }) => {
@@ -30,7 +30,7 @@ export const Button = ({
   return (
     <button onClick={onClick} className={buttonClassNames}>
       {ButtonIcon && <ButtonIcon className={styles.buttonIcon} />}
-      {!iconOnly && <span className={styles.buttonText}>{value}</span>}
+      {!iconOnly && <span className={styles.buttonText}>{children}</span>}
     </button>
   );
 };

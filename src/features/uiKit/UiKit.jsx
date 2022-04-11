@@ -1,7 +1,7 @@
 import cx from "classnames";
 import styles from "./UiKit.module.css";
 import {
-  Label,
+  InputLabel,
   Input,
   Checkbox,
   Radio,
@@ -16,30 +16,26 @@ export const UiKit = () => {
       <div className={styles.uiKitBlock}>
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
-          <Label labelValue="Дата и время заказа" htmlFor="orderDateBlank" />
+          <InputLabel htmlFor="orderDateBlank">Дата и время заказа</InputLabel>
           <Input
             id="orderDateBlank"
-            type="text"
             value=""
             placeholder="Введите"
             hasLabel
           />
-          <Label
-            labelValue="Дата и время заказа"
+          <InputLabel
             htmlFor="orderDateIncorrect"
-          />
+          >Дата и время заказа</InputLabel>
           <Input
             id="orderDateIncorrect"
-            type="text"
             value="06.12.2021"
             placeholder="Введите"
             isInputIncorrect
             hasLabel
           />
-          <Label labelValue="Дата и время заказа" htmlFor="orderDateDisabled" />
+          <InputLabel htmlFor="orderDateDisabled">Дата и время заказа</InputLabel>
           <Input
             id="orderDateDisabled"
-            type="text"
             value="06.12.2021"
             disabled
             hasLabel
@@ -51,14 +47,12 @@ export const UiKit = () => {
         <div className={styles.blockContent}>
           <Input
             id="searchBar"
-            type="text"
             value=""
             placeholder="Номер заказа или ФИО"
             inputIcon={Search}
           />
           <Input
             id="searchBar"
-            type="text"
             value="50744"
             placeholder="Номер заказа или ФИО"
             inputIcon={Search}
@@ -70,8 +64,8 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Checkbox id="checkbox_1" type="checkbox" isCheckboxChecked />
-          <Checkbox id="checkbox_2" type="checkbox" />
+          <Checkbox id="checkbox_1" isCheckboxChecked />
+          <Checkbox id="checkbox_2" />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>
@@ -79,8 +73,8 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Radio id="radio_1" name="radio-name" type="radio" />
-          <Radio id="radio_2" name="radio-name" type="radio" isRadioChecked />
+          <Radio id="radio_1" name="radio-name" />
+          <Radio id="radio_2" name="radio-name" isRadioChecked />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockButtonBlock)}>
@@ -92,22 +86,22 @@ export const UiKit = () => {
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
                 <Button
-                  value="Text here"
                   themeBlue
                   sizeDefault
                   buttonIcon={DotLarge}
-                />
-                <Button value="Text here" themeBlue sizeDefault />
+                >
+                  Text here
+                </Button>
+                <Button themeBlue sizeDefault>Text here</Button>
                 <Button themeBlue sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
               <div className={styles.buttonBlockWrapper}>
                 <Button
-                  value="Text here"
                   themeBlue
                   sizeSmall
                   buttonIcon={DotLarge}
-                />
-                <Button value="Text here" themeBlue sizeSmall />
+                  >Text here</Button>
+                <Button themeBlue sizeSmall>Text here</Button>
                 <Button themeBlue sizeSmall iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -116,22 +110,20 @@ export const UiKit = () => {
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
                 <Button
-                  value="Text here"
                   themeLink
                   sizeDefault
                   buttonIcon={DotLarge}
-                />
-                <Button value="Text here" themeLink sizeDefault />
+                >Text here</Button>
+                <Button themeLink sizeDefault>Text here</Button>
                 <Button themeLink sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
               <div className={styles.buttonBlockWrapper}>
                 <Button
-                  value="Text here"
                   themeLink
                   sizeSmall
                   buttonIcon={DotLarge}
-                />
-                <Button value="Text here" themeLink sizeSmall />
+                >Text here</Button>
+                <Button themeLink sizeSmall>Text here</Button>
                 <Button themeLink sizeSmall iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -140,12 +132,11 @@ export const UiKit = () => {
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
                 <Button
-                  value="Text here"
                   themeText
                   sizeDefault
                   buttonIcon={DotLarge}
-                />
-                <Button value="Text here" themeText sizeDefault />
+                >Text here</Button>
+                <Button themeText sizeDefault>Text here</Button>
                 <Button themeText sizeDefault iconOnly buttonIcon={DotLarge} />
               </div>
             </div>
@@ -157,31 +148,26 @@ export const UiKit = () => {
         <div className={styles.blockContent}>
           <div className={styles.dropdownWrapper}>
             <Dropdown isCheckboxRadioDropdown>
-              <Checkbox id="checkbox_new" type="checkbox" labelValue="Новый" />
+              <Checkbox id="checkbox_new" labelValue="Новый" />
               <Checkbox
                 id="checkbox_calc"
-                type="checkbox"
                 labelValue="Рассчет"
               />
               <Checkbox
                 id="checkbox_approved"
-                type="checkbox"
                 labelValue="Подтвержден"
                 isCheckboxChecked
               />
               <Checkbox
                 id="checkbox_delayed"
-                type="checkbox"
                 labelValue="Отложен"
               />
               <Checkbox
                 id="checkbox_completed"
-                type="checkbox"
                 labelValue="Выполнен"
               />
               <Checkbox
                 id="checkbox_canceled"
-                type="checkbox"
                 labelValue="Отменен"
               />
             </Dropdown>
@@ -189,21 +175,18 @@ export const UiKit = () => {
               <Radio
                 id="radio_new"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Новый"
                 noIco
               />
               <Radio
                 id="radio_calc"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Рассчет"
                 noIco
               />
               <Radio
                 id="radio_approved"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Подтвержден"
                 isRadioChecked
                 noIco
@@ -211,21 +194,18 @@ export const UiKit = () => {
               <Radio
                 id="radio_delayed"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Отложен"
                 noIco
               />
               <Radio
                 id="radio_completed"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Выполнен"
                 noIco
               />
               <Radio
                 id="radio_canceled"
                 name="radio-dropdown"
-                type="radio"
                 labelValue="Отменен"
                 noIco
               />
@@ -236,24 +216,22 @@ export const UiKit = () => {
               <Input placeholder="Введите номер" hasXButton={false} />
             </Dropdown>
             <Dropdown dropdownTitle="Удалить n записей?">
-              <Button value="Удалить" themeLink sizeSmall isFullWidth />
-              <Button value="Отмена" themeBlue sizeSmall isFullWidth />
+              <Button themeLink sizeSmall isFullWidth>Удалить</Button>
+              <Button themeBlue sizeSmall isFullWidth>Отмена</Button>
             </Dropdown>
             <Dropdown dropdownTitle="Выберите тему">
               <Button
-                value="Светлая"
                 themeLink
                 sizeSmall
                 isFullWidth
                 buttonIcon={Sun}
-              />
+              >Светлая</Button>
               <Button
-                value="Темная"
                 themeBlue
                 sizeSmall
                 isFullWidth
                 buttonIcon={Moon}
-              />
+              >Темная</Button>
             </Dropdown>
           </div>
         </div>
