@@ -12,7 +12,6 @@ import {
 import { DotLarge, Moon, Search, Sun } from "../../icons";
 
 export const UiKit = () => {
-
   const [inputValue, setInputValue] = useState("");
 
   const handleInputValue = ({ target: { value } }) => {
@@ -38,9 +37,21 @@ export const UiKit = () => {
       <div className={styles.uiKitBlock}>
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
-          <InputLabel htmlFor="orderDateBlank" className={styles.inputLabel}>Дата и время заказа </InputLabel>
-          <Input id="orderDateBlank" value={inputValue} placeholder="Введите" onChange={handleInputValue} onClick={onReset} className={styles.inputInput} />
-          <InputLabel htmlFor="orderDateIncorrect" className={styles.inputLabel}>
+          <InputLabel htmlFor="orderDateBlank" className={styles.inputLabel}>
+            Дата и время заказа{" "}
+          </InputLabel>
+          <Input
+            id="orderDateBlank"
+            value={inputValue}
+            placeholder="Введите"
+            onChange={handleInputValue}
+            onClick={onReset}
+            className={styles.inputInput}
+          />
+          <InputLabel
+            htmlFor="orderDateIncorrect"
+            className={styles.inputLabel}
+          >
             Дата и время заказа
           </InputLabel>
           <Input
@@ -53,7 +64,12 @@ export const UiKit = () => {
           <InputLabel htmlFor="orderDateDisabled" className={styles.inputLabel}>
             Дата и время заказа
           </InputLabel>
-          <Input id="orderDateDisabled" value="06.12.2021" disabled className={styles.inputInput} />
+          <Input
+            id="orderDateDisabled"
+            value="06.12.2021"
+            disabled
+            className={styles.inputInput}
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSearchbar)}>
@@ -63,7 +79,7 @@ export const UiKit = () => {
             id="searchBar"
             value=""
             placeholder="Номер заказа или ФИО"
-            onChange={handleInputValue} 
+            onChange={handleInputValue}
             onClick={onReset}
             inputIcon={Search}
             className={styles.searchbarInput}
@@ -72,7 +88,7 @@ export const UiKit = () => {
             id="searchBar"
             value="50744"
             placeholder="Номер заказа или ФИО"
-            onChange={handleInputValue} 
+            onChange={handleInputValue}
             onClick={onReset}
             inputIcon={Search}
             className={styles.searchbarInput}
@@ -84,8 +100,16 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Checkbox id="checkbox_1" checked={checked} onChange={handleCheckbox} />
-          <Checkbox id="checkbox_2" checked={checked} onChange={handleCheckbox} />
+          <Checkbox
+            id="checkbox_1"
+            checked={checked}
+            onChange={handleCheckbox}
+          />
+          <Checkbox
+            id="checkbox_2"
+            checked={checked}
+            onChange={handleCheckbox}
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>
@@ -93,8 +117,18 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Radio id="radio_1" name="radio-name" checked={checked} onChange={handleRadio} />
-          <Radio id="radio_2" name="radio-name" checked={checked} onChange={handleRadio} />
+          <Radio
+            id="radio_1"
+            name="radio-name"
+            checked={checked}
+            onChange={handleRadio}
+          />
+          <Radio
+            id="radio_2"
+            name="radio-name"
+            checked={checked}
+            onChange={handleRadio}
+          />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockButtonBlock)}>
@@ -108,54 +142,90 @@ export const UiKit = () => {
                 <Button buttonIcon={DotLarge} className={styles.buttonButton}>
                   Text here
                 </Button>
-                <Button className={styles.buttonButton}>
-                  Text here
-                </Button>
+                <Button className={styles.buttonButton}>Text here</Button>
                 <Button buttonIcon={DotLarge} className={styles.buttonButton} />
               </div>
               <div className={styles.buttonBlockWrapper}>
-                <Button size='small' buttonIcon={DotLarge} className={styles.buttonButton}>
+                <Button
+                  size="small"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                >
                   Text here
                 </Button>
-                <Button size='small' className={styles.buttonButton}>
+                <Button size="small" className={styles.buttonButton}>
                   Text here
                 </Button>
-                <Button size='small' buttonIcon={DotLarge} className={styles.buttonButton} />
+                <Button
+                  size="small"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                />
               </div>
             </div>
           </div>
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button theme='link' buttonIcon={DotLarge} className={styles.buttonButton}>
+                <Button
+                  theme="link"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                >
                   Text here
                 </Button>
-                <Button theme='link' className={styles.buttonButton}>
+                <Button theme="link" className={styles.buttonButton}>
                   Text here
                 </Button>
-                <Button theme='link' buttonIcon={DotLarge} className={styles.buttonButton} />
+                <Button
+                  theme="link"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                />
               </div>
               <div className={styles.buttonBlockWrapper}>
-                <Button theme='link' size='small' buttonIcon={DotLarge} className={styles.buttonButton}>
+                <Button
+                  theme="link"
+                  size="small"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                >
                   Text here
                 </Button>
-                <Button theme='link' size='small' className={styles.buttonButton}>
+                <Button
+                  theme="link"
+                  size="small"
+                  className={styles.buttonButton}
+                >
                   Text here
                 </Button>
-                <Button theme='link' size='small' buttonIcon={DotLarge} className={styles.buttonButton} />
+                <Button
+                  theme="link"
+                  size="small"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                />
               </div>
             </div>
           </div>
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button theme='text' buttonIcon={DotLarge} className={styles.buttonButton}>
+                <Button
+                  theme="text"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                >
                   Text here
                 </Button>
-                <Button theme='text' className={styles.buttonButton}>
+                <Button theme="text" className={styles.buttonButton}>
                   Text here
                 </Button>
-                <Button theme='text' buttonIcon={DotLarge} className={styles.buttonButton} />
+                <Button
+                  theme="text"
+                  buttonIcon={DotLarge}
+                  className={styles.buttonButton}
+                />
               </div>
             </div>
           </div>
@@ -165,7 +235,7 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Dropdown</div>
         <div className={styles.blockContent}>
           <div className={styles.dropdownWrapper}>
-            <Dropdown isCheckboxRadioDropdown  className={styles.dropdownBlock}>
+            <Dropdown isCheckboxRadioDropdown className={styles.dropdownBlock}>
               <Checkbox id="checkbox_new" labelValue="Новый" />
               <Checkbox id="checkbox_calc" labelValue="Рассчет" />
               <Checkbox
@@ -177,7 +247,7 @@ export const UiKit = () => {
               <Checkbox id="checkbox_completed" labelValue="Выполнен" />
               <Checkbox id="checkbox_canceled" labelValue="Отменен" />
             </Dropdown>
-            <Dropdown isCheckboxRadioDropdown  className={styles.dropdownBlock}>
+            <Dropdown isCheckboxRadioDropdown className={styles.dropdownBlock}>
               <Radio
                 id="radio_new"
                 name="radio-dropdown"
@@ -194,7 +264,7 @@ export const UiKit = () => {
                 id="radio_approved"
                 name="radio-dropdown"
                 labelValue="Подтвержден"
-                Checked
+                checked
                 noIcon
               />
               <Radio
@@ -218,22 +288,51 @@ export const UiKit = () => {
             </Dropdown>
           </div>
           <div className={styles.dropdownWrapper}>
-            <Dropdown dropdownTitle="Номер страницы"  className={styles.dropdownBlock}>
+            <Dropdown
+              dropdownTitle="Номер страницы"
+              className={styles.dropdownBlock}
+            >
               <Input placeholder="Введите номер" />
             </Dropdown>
-            <Dropdown dropdownTitle="Удалить n записей?"  className={styles.dropdownBlock}>
-              <Button theme='link' size='small' isFullWidth className={styles.dropdownButton}>
+            <Dropdown
+              dropdownTitle="Удалить n записей?"
+              className={styles.dropdownBlock}
+            >
+              <Button
+                theme="link"
+                size="small"
+                isFullWidth
+                className={styles.dropdownButton}
+              >
                 Удалить
               </Button>
-              <Button size='small' isFullWidth className={styles.dropdownButton}>
+              <Button
+                size="small"
+                isFullWidth
+                className={styles.dropdownButton}
+              >
                 Отмена
               </Button>
             </Dropdown>
-            <Dropdown dropdownTitle="Выберите тему"  className={styles.dropdownBlock}>
-              <Button theme='link' size='small' isFullWidth buttonIcon={Sun} className={styles.dropdownButton}>
+            <Dropdown
+              dropdownTitle="Выберите тему"
+              className={styles.dropdownBlock}
+            >
+              <Button
+                theme="link"
+                size="small"
+                isFullWidth
+                buttonIcon={Sun}
+                className={styles.dropdownButton}
+              >
                 Светлая
               </Button>
-              <Button size='small' isFullWidth buttonIcon={Moon} className={styles.dropdownButton}>
+              <Button
+                size="small"
+                isFullWidth
+                buttonIcon={Moon}
+                className={styles.dropdownButton}
+              >
                 Темная
               </Button>
             </Dropdown>

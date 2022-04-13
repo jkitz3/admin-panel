@@ -6,13 +6,12 @@ export const Checkbox = ({
   checked = false,
   onChange = () => {},
 }) => {
- 
   return (
     <div className={styles.checkbox}>
       <div className={styles.checkboxContent}>
         <input
           id={id}
-          type='checkbox'
+          type="checkbox"
           checked={checked}
           onChange={onChange}
           className={styles.checkboxInput}

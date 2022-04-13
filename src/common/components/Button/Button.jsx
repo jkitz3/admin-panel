@@ -2,8 +2,8 @@ import cx from "classnames";
 import styles from "./Button.module.css";
 
 export const Button = ({
-  theme='blue',
-  size='default',
+  theme = "blue",
+  size = "default",
   isFullWidth = false,
   buttonIcon: ButtonIcon,
   onClick = () => {},

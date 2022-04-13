@@ -14,7 +14,6 @@ export const Input = ({
   className,
   ...props
 }) => {
-
   const inputClassNames = cx(styles.input, {
     [styles.inputDisabled]: disabled,
     [styles.inputIncorrect]: isInputIncorrect,

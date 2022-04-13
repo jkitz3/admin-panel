@@ -9,20 +9,21 @@ export const Radio = ({
   onChange = () => {},
   noIcon,
 }) => {
-
   return (
     <div className={styles.radio}>
       <div className={styles.radioContent}>
         <input
           id={id}
           name={name}
-          type='radio'
+          type="radio"
           checked={checked}
           onChange={onChange}
           className={styles.radioInput}
         />
         <label
-          className={cx(styles.radioLabel, {[styles.radioLabelNoIcon]: noIcon,})}
+          className={cx(styles.radioLabel, {
+            [styles.radioLabelNoIcon]: noIcon,
+          })}
           htmlFor={id}
         >
           {labelValue}
