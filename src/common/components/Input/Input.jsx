@@ -1,52 +1,42 @@
-import { useState } from "react";
 import cx from "classnames";
 import styles from "./Input.module.css";
 import { Locked, XMedium } from "../../../icons";
 
 export const Input = ({
   id,
-  type = "text",
   value = "",
   placeholder,
   disabled,
   isInputIncorrect,
   inputIcon: InputIcon,
-  hasLabel,
-  hasXButton = true,
+  onChange = () => {},
+  onClick = () => {},
   className,
   ...props
 }) => {
-  const [inputValue, setInputValue] = useState(value);
-
-  const handleInputValue = ({ target: { value } }) => {
-    setInputValue(value);
-  };
-
-  const clearInputValue = () => {
-    setInputValue("");
-  };
 
   const inputClassNames = cx(styles.input, {
     [styles.inputDisabled]: disabled,
     [styles.inputIncorrect]: isInputIncorrect,
     [styles.inputWithIcon]: InputIcon,
-    [styles.inputNoXButton]: !hasXButton,
+    [styles.inputWithValue]: value,
   });
 
   return (
-    <div className={hasLabel ? styles.block : styles.noLabelBlock}>
+    <div className={className}>
       <div className={styles.blockContent}>
         {InputIcon && <InputIcon className={styles.inputIcon} />}
         <input
           id={id}
-          type={type}
-          value={inputValue}
+          type="text"
+          value={value}
           placeholder={placeholder}
-          onChange={handleInputValue}
+          onChange={onChange}
           className={inputClassNames}
+          {...props}
         />
-        {inputValue && hasXButton && (
-          <button onClick={clearInputValue} className={styles.button}>
+        {value && !disabled && (
+          <button onClick={onClick} className={styles.button}>
             <XMedium className={styles.xButton} />
           </button>
         )}

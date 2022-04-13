@@ -68,7 +68,6 @@
   flex-direction: column;
 }
 .buttonBlockWrapper {
-  height: 128px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -78,9 +77,6 @@
 .buttonBlockWrapper:last-child {
   margin-bottom: 0;
 }
-.buttonBlockWrapper:nth-child(2n) {
-  height: 104px;
-}
 .dropdownWrapper {
   display: flex;
   justify-content: flex-start;
@@ -89,4 +85,37 @@
 }
 .dropdownWrapper:last-child {
   margin-bottom: 0;
+}
+.dropdownButton {
+  margin-bottom: 8px;
+}
+.dropdownButton:last-child {
+  margin-bottom: 0;
+}
+.buttonButton {
+  margin-bottom: 16px;
+}
+.buttonButton:last-child {
+  margin-bottom: 0;
+}
+.inputInput {
+  margin-bottom: 48px;
+}
+.inputInput:last-child {
+  margin-bottom: 0;
+}
+.searchbarInput {
+  margin-bottom: 32px;
+}
+.searchbarInput:last-child {
+  margin-bottom: 0;
+}
+.inputLabel {
+  margin-bottom: 8px;
+}
+.dropdownBlock {
+  margin-right: 48px;
+}
+.dropdownBlock:last-child {
+  margin-right: 0;
 }

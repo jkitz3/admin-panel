@@ -37,13 +37,13 @@
   background-repeat: no-repeat;
   opacity: 0;
 }
-.radioLabelNoIco {
+.radioLabelNoIcon {
   padding-left: 0;
 }
-.radioLabelNoIco::before {
+.radioLabelNoIcon::before {
   display: none;
 }
-.radioLabelNoIco::after {
+.radioLabelNoIcon::after {
   display: none;
 }
 .radio {

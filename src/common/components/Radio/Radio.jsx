@@ -1,41 +1,28 @@
-import { useState } from "react";
 import cx from "classnames";
 import styles from "./Radio.module.css";
 
 export const Radio = ({
   id,
   name,
-  type = "radio",
-  onChange,
   labelValue,
-  isRadioChecked = false,
-  noIco,
-  className,
-  ...props
+  checked = false,
+  onChange = () => {},
+  noIcon,
 }) => {
-  const [radioChecked, setRadioChecked] = useState(isRadioChecked);
-
-  const handleRadio = ({ target: { checked } }) => {
-    setRadioChecked(checked);
-  };
 
   return (
-    <div className={cx(styles.radio, styles.blockRadio)}>
+    <div className={styles.radio}>
       <div className={styles.radioContent}>
         <input
           id={id}
           name={name}
-          type={type}
-          checked={radioChecked}
-          onChange={handleRadio}
+          type='radio'
+          checked={checked}
+          onChange={onChange}
           className={styles.radioInput}
         />
         <label
-          className={
-            noIco
-              ? cx(styles.radioLabel, styles.radioLabelNoIco)
-              : styles.radioLabel
-          }
+          className={cx(styles.radioLabel, {[styles.radioLabelNoIcon]: noIcon,})}
           htmlFor={id}
         >
           {labelValue}

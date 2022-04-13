@@ -5,8 +5,9 @@ export const Dropdown = ({
   children,
   isCheckboxRadioDropdown,
   dropdownTitle,
+  className,
 }) => {
-  const dropdownClassNames = cx(styles.dropdownBlock, styles.dropdown, {
+  const dropdownClassNames = cx(styles.dropdown, className, {
     [styles.checkboxRadioDropdown]: isCheckboxRadioDropdown,
   });
 

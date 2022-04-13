@@ -6,41 +6,37 @@
   border-radius: 4px;
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 8px;
-}
-.button:last-child {
-  margin-bottom: 0;
 }
 .button:focus {
   outline: none;
 }
-.buttonThemeBlue {
+.theme_blue {
   border: 1px solid #459df5;
   background-color: #459df5;
   color: #fff;
 }
-.buttonThemeBlue .buttonIcon {
+.theme_blue .buttonIcon {
   fill: #fff;
 }
-.buttonThemeLink {
+.theme_link {
   color: #459df5;
 }
-.buttonThemeLink .buttonIcon {
+.theme_link .buttonIcon {
   fill: #459df5;
 }
-.buttonThemeText .buttonIcon {
+.theme_text .buttonIcon {
   fill: #000;
 }
-.buttonSizeDefault {
+.size_default {
   padding: 8px 16px;
 }
-.buttonSizeSmall {
+.size_small {
   padding: 4px 8px;
 }
-.buttonSizeDefault + .buttonIconOnly {
+.size_default + .buttonIconOnly {
   padding: 8px 8px;
 }
-.buttonSizeSmall + .buttonIconOnly {
+.size_small + .buttonIconOnly {
   padding: 4px 4px;
 }
 .buttonIcon {
@@ -48,10 +44,10 @@
   height: 16px;
 }
 .buttonIcon + .buttonText {
-  margin-left: 8px;
+  padding-left: 8px;
 }
-.button_size_small > .buttonIcon + .button__text {
-  margin-left: 4px;
+.buttonSizeSmall > .buttonIcon + .buttonText {
+  padding-left: 4px;
 }
 .buttonFullWidth {
   width: 100%;

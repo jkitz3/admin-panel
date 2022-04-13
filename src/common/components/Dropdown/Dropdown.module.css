@@ -1,9 +1,3 @@
-.dropdownBlock {
-  margin-right: 48px;
-}
-.dropdownBlock:last-child {
-  margin-right: 0;
-}
 .checkboxRadioDropdown {
   height: 208px;
 }
@@ -20,10 +14,6 @@
 .dropdownTitle {
   display: inline-block;
   margin-bottom: 8px;
-}
-.dropdownItem {
-  margin-bottom: 8px;
-}
-.dropdownItem:last-child {
-  margin-bottom: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

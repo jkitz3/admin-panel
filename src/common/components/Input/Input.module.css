@@ -22,10 +22,10 @@
   min-height: 32px;
   border-radius: 4px;
   border: 1px solid #459df5;
-  padding: 0 32px 0 8px;
-}
-.inputNoXButton {
   padding: 0 4px 0 8px;
+}
+.inputWithValue {
+  padding-right: 32px;
 }
 .input:focus {
   outline: none;
@@ -35,18 +35,6 @@
 }
 .input::-webkit-input-placeholder {
   color: #bad8f5;
-}
-.block {
-  margin-bottom: 22px;
-}
-.block:last-child {
-  margin-bottom: 0px;
-}
-.noLabelBlock {
-  margin-bottom: 32px;
-}
-.noLabelBlock:last-child {
-  margin-bottom: 0px;
 }
 .blockContent {
   position: relative;
