@@ -3,13 +3,10 @@ import styles from "./Dropdown.module.css";
 
 export const Dropdown = ({
   children,
-  isCheckboxRadioDropdown,
   dropdownTitle,
   className,
 }) => {
-  const dropdownClassNames = cx(styles.dropdown, className, {
-    [styles.checkboxRadioDropdown]: isCheckboxRadioDropdown,
-  });
+  const dropdownClassNames = cx(styles.dropdown, className);
 
   return (
     <div className={dropdownClassNames}>

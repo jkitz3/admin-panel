@@ -235,7 +235,7 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Dropdown</div>
         <div className={styles.blockContent}>
           <div className={styles.dropdownWrapper}>
-            <Dropdown isCheckboxRadioDropdown className={styles.dropdownBlock}>
+            <Dropdown className={styles.dropdownBlock}>
               <Checkbox id="checkbox_new" labelValue="Новый" />
               <Checkbox id="checkbox_calc" labelValue="Рассчет" />
               <Checkbox
@@ -247,7 +247,7 @@ export const UiKit = () => {
               <Checkbox id="checkbox_completed" labelValue="Выполнен" />
               <Checkbox id="checkbox_canceled" labelValue="Отменен" />
             </Dropdown>
-            <Dropdown isCheckboxRadioDropdown className={styles.dropdownBlock}>
+            <Dropdown className={styles.dropdownBlock}>
               <Radio
                 id="radio_new"
                 name="radio-dropdown"
