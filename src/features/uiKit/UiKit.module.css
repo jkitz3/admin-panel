@@ -10,7 +10,6 @@
 .uiKitBlock {
   position: relative;
   width: 354px;
-  min-width: 354px;
   padding: 48px;
   margin: 0 48px 48px 0;
   border: 1px dashed #a8a8ff;
@@ -32,20 +31,18 @@
 }
 .uiKitBlockSearchbar {
   width: 354px;
-  min-width: 354px;
   padding: 48px;
 }
 .uiKitBlockSizeSmall {
   width: 104px;
   min-width: 104px;
-  padding: 24px;
+  padding: 13px 24px;
 }
 .blockContentCheckboxRadio {
   flex-direction: row;
 }
 .uiKitBlockButtonBlock {
   width: 578px;
-  min-width: 578px;
   padding: 48px;
 }
 .blockContentButtonBlock {
@@ -54,7 +51,6 @@
 }
 .uiKitBlockDropdown {
   width: 674px;
-  min-width: 674px;
   padding: 48px;
 }
 .blockButtonBlock {
@@ -118,4 +114,10 @@
 }
 .dropdownBlock:last-child {
   margin-right: 0;
+}
+.checkboxRadio {
+  margin-right: 15px;
+}
+.checkboxRadioDropdown {
+  padding: 8px 16px;
 }

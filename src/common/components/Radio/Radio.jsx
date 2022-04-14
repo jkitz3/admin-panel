@@ -6,19 +6,20 @@ export const Radio = ({
   name,
   labelValue,
   checked = false,
-  onChange = () => {},
   noIcon,
+  className,
+  ...props
 }) => {
   return (
-    <div className={styles.radio}>
+    <div className={cx(styles.radio, className)}>
       <div className={styles.radioContent}>
         <input
           id={id}
           name={name}
           type="radio"
-          checked={checked}
-          onChange={onChange}
+          defaultChecked={checked}
           className={styles.radioInput}
+          {...props}
         />
         <label
           className={cx(styles.radioLabel, {

@@ -22,16 +22,6 @@ export const UiKit = () => {
     setInputValue("");
   };
 
-  const [checked, setChecked] = useState(false);
-
-  const handleCheckbox = ({ target: { checked } }) => {
-    setChecked(checked);
-  };
-
-  const handleRadio = ({ target: { checked } }) => {
-    setChecked(checked);
-  };
-
   return (
     <div className={styles.uiKit}>
       <div className={styles.uiKitBlock}>
@@ -79,8 +69,6 @@ export const UiKit = () => {
             id="searchBar"
             value=""
             placeholder="Номер заказа или ФИО"
-            onChange={handleInputValue}
-            onClick={onReset}
             inputIcon={Search}
             className={styles.searchbarInput}
           />
@@ -88,8 +76,6 @@ export const UiKit = () => {
             id="searchBar"
             value="50744"
             placeholder="Номер заказа или ФИО"
-            onChange={handleInputValue}
-            onClick={onReset}
             inputIcon={Search}
             className={styles.searchbarInput}
           />
@@ -100,16 +86,8 @@ export const UiKit = () => {
         <div
           className={cx(styles.blockContent, styles.blockContentCheckboxRadio)}
         >
-          <Checkbox
-            id="checkbox_1"
-            checked={checked}
-            onChange={handleCheckbox}
-          />
-          <Checkbox
-            id="checkbox_2"
-            checked={checked}
-            onChange={handleCheckbox}
-          />
+          <Checkbox id="checkbox_1" className={styles.checkboxRadio} />
+          <Checkbox id="checkbox_2" checked />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockSizeSmall)}>
@@ -120,15 +98,9 @@ export const UiKit = () => {
           <Radio
             id="radio_1"
             name="radio-name"
-            checked={checked}
-            onChange={handleRadio}
+            className={styles.checkboxRadio}
           />
-          <Radio
-            id="radio_2"
-            name="radio-name"
-            checked={checked}
-            onChange={handleRadio}
-          />
+          <Radio id="radio_2" name="radio-name" checked />
         </div>
       </div>
       <div className={cx(styles.uiKitBlock, styles.uiKitBlockButtonBlock)}>
@@ -235,7 +207,9 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Dropdown</div>
         <div className={styles.blockContent}>
           <div className={styles.dropdownWrapper}>
-            <Dropdown className={styles.dropdownBlock}>
+            <Dropdown
+              className={cx(styles.dropdownBlock, styles.checkboxRadioDropdown)}
+            >
               <Checkbox id="checkbox_new" labelValue="Новый" />
               <Checkbox id="checkbox_calc" labelValue="Рассчет" />
               <Checkbox
@@ -247,7 +221,9 @@ export const UiKit = () => {
               <Checkbox id="checkbox_completed" labelValue="Выполнен" />
               <Checkbox id="checkbox_canceled" labelValue="Отменен" />
             </Dropdown>
-            <Dropdown className={styles.dropdownBlock}>
+            <Dropdown
+              className={cx(styles.dropdownBlock, styles.checkboxRadioDropdown)}
+            >
               <Radio
                 id="radio_new"
                 name="radio-dropdown"

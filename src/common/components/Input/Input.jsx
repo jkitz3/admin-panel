@@ -12,7 +12,6 @@ export const Input = ({
   onChange = () => {},
   onClick = () => {},
   className,
-  ...props
 }) => {
   const inputClassNames = cx(styles.input, {
     [styles.inputDisabled]: disabled,
@@ -32,7 +31,6 @@ export const Input = ({
           placeholder={placeholder}
           onChange={onChange}
           className={inputClassNames}
-          {...props}
         />
         {value && !disabled && (
           <button onClick={onClick} className={styles.button}>
