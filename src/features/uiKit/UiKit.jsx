@@ -12,15 +12,6 @@ import {
 import { DotLarge, Moon, Search, Sun } from "../../icons";
 
 export const UiKit = () => {
-  // const [inputValue, setInputValue] = useState("");
-
-  // const handleInputValue = ({ target: { value } }) => {
-  //   setInputValue(value);
-  // };
-
-  // const onReset = () => {
-  //   setInputValue("");
-  // };
   const initialValues = {
     orderDateBlank: "",
     orderDateIncorrect: "06.12.2021",
@@ -38,7 +29,7 @@ export const UiKit = () => {
       [id]: value,
     }));
   };
-
+  
   const onReset = ({ target: { id } }) => {
     setInputValues((prevState) => ({
       ...prevState,
