@@ -5,21 +5,21 @@ export const Button = ({
   theme = "blue",
   size = "default",
   isFullWidth = false,
-  buttonIcon: ButtonIcon,
+  icon: Icon,
   onClick = () => {},
   children,
   className,
 }) => {
   const buttonClassNames = cx(styles.button, className, {
-    [styles[`theme_${theme}`]]: !!theme,
-    [styles[`size_${size}`]]: !!size,
-    [styles.buttonIconOnly]: !!ButtonIcon && !children,
+    [styles[`theme_${theme}`]]: true,
+    [styles[`size_${size}`]]: true,
+    [styles.buttonIconOnly]: !!Icon && !children,
     [styles.buttonFullWidth]: isFullWidth,
   });
 
   return (
     <button onClick={onClick} className={buttonClassNames}>
-      {ButtonIcon && <ButtonIcon className={styles.buttonIcon} />}
+      {Icon && <Icon className={styles.buttonIcon} />}
       {children && <span className={styles.buttonText}>{children}</span>}
     </button>
   );

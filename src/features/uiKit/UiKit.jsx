@@ -12,14 +12,38 @@ import {
 import { DotLarge, Moon, Search, Sun } from "../../icons";
 
 export const UiKit = () => {
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
 
-  const handleInputValue = ({ target: { value } }) => {
-    setInputValue(value);
+  // const handleInputValue = ({ target: { value } }) => {
+  //   setInputValue(value);
+  // };
+
+  // const onReset = () => {
+  //   setInputValue("");
+  // };
+  const initialValues = {
+    orderDateBlank: "",
+    orderDateIncorrect: "06.12.2021",
+    orderDateDisabled: "06.12.2021",
+    searchBarOne: "",
+    searchBarTwo: "50744",
+    dropdownInput: "",
   };
 
-  const onReset = () => {
-    setInputValue("");
+  const [inputValues, setInputValues] = useState(initialValues);
+
+  const handleInputValue = ({ target: { id, value } }) => {
+    setInputValues((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+
+  const onReset = ({ target: { id } }) => {
+    setInputValues((prevState) => ({
+      ...prevState,
+      [id]: "",
+    }));
   };
 
   return (
@@ -28,14 +52,14 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>Input</div>
         <div className={styles.blockContent}>
           <InputLabel htmlFor="orderDateBlank" className={styles.inputLabel}>
-            Дата и время заказа{" "}
+            Дата и время заказа
           </InputLabel>
           <Input
             id="orderDateBlank"
-            value={inputValue}
-            placeholder="Введите"
+            value={inputValues.orderDateBlank}
             onChange={handleInputValue}
-            onClick={onReset}
+            onReset={onReset}
+            placeholder="Введите"
             className={styles.inputInput}
           />
           <InputLabel
@@ -46,9 +70,11 @@ export const UiKit = () => {
           </InputLabel>
           <Input
             id="orderDateIncorrect"
-            value="06.12.2021"
+            value={inputValues.orderDateIncorrect}
+            onChange={handleInputValue}
+            onReset={onReset}
             placeholder="Введите"
-            isInputIncorrect
+            isIncorrect
             className={styles.inputInput}
           />
           <InputLabel htmlFor="orderDateDisabled" className={styles.inputLabel}>
@@ -56,7 +82,7 @@ export const UiKit = () => {
           </InputLabel>
           <Input
             id="orderDateDisabled"
-            value="06.12.2021"
+            value={inputValues.orderDateDisabled}
             disabled
             className={styles.inputInput}
           />
@@ -66,17 +92,21 @@ export const UiKit = () => {
         <div className={styles.blockTitle}>SearchBar</div>
         <div className={styles.blockContent}>
           <Input
-            id="searchBar"
-            value=""
+            id="searchBarOne"
+            value={inputValues.searchBarOne}
+            onChange={handleInputValue}
+            onReset={onReset}
             placeholder="Номер заказа или ФИО"
-            inputIcon={Search}
+            icon={Search}
             className={styles.searchbarInput}
           />
           <Input
-            id="searchBar"
-            value="50744"
+            id="searchBarTwo"
+            value={inputValues.searchBarTwo}
+            onChange={handleInputValue}
+            onReset={onReset}
             placeholder="Номер заказа или ФИО"
-            inputIcon={Search}
+            icon={Search}
             className={styles.searchbarInput}
           />
         </div>
@@ -111,16 +141,16 @@ export const UiKit = () => {
           <div className={styles.blockButtonBlock}>
             <div className={styles.buttonBlockContent}>
               <div className={styles.buttonBlockWrapper}>
-                <Button buttonIcon={DotLarge} className={styles.buttonButton}>
+                <Button icon={DotLarge} className={styles.buttonButton}>
                   Text here
                 </Button>
                 <Button className={styles.buttonButton}>Text here</Button>
-                <Button buttonIcon={DotLarge} className={styles.buttonButton} />
+                <Button icon={DotLarge} className={styles.buttonButton} />
               </div>
               <div className={styles.buttonBlockWrapper}>
                 <Button
                   size="small"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 >
                   Text here
@@ -130,7 +160,7 @@ export const UiKit = () => {
                 </Button>
                 <Button
                   size="small"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 />
               </div>
@@ -141,7 +171,7 @@ export const UiKit = () => {
               <div className={styles.buttonBlockWrapper}>
                 <Button
                   theme="link"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 >
                   Text here
@@ -151,7 +181,7 @@ export const UiKit = () => {
                 </Button>
                 <Button
                   theme="link"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 />
               </div>
@@ -159,7 +189,7 @@ export const UiKit = () => {
                 <Button
                   theme="link"
                   size="small"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 >
                   Text here
@@ -174,7 +204,7 @@ export const UiKit = () => {
                 <Button
                   theme="link"
                   size="small"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 />
               </div>
@@ -185,7 +215,7 @@ export const UiKit = () => {
               <div className={styles.buttonBlockWrapper}>
                 <Button
                   theme="text"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 >
                   Text here
@@ -195,7 +225,7 @@ export const UiKit = () => {
                 </Button>
                 <Button
                   theme="text"
-                  buttonIcon={DotLarge}
+                  icon={DotLarge}
                   className={styles.buttonButton}
                 />
               </div>
@@ -268,7 +298,14 @@ export const UiKit = () => {
               dropdownTitle="Номер страницы"
               className={styles.dropdownBlock}
             >
-              <Input placeholder="Введите номер" />
+              <Input
+                id="dropdownInput"
+                value={inputValues.dropdownInput}
+                onChange={handleInputValue}
+                onReset={onReset}
+                placeholder="Введите номер"
+                className={styles.dropdownInput}
+              />
             </Dropdown>
             <Dropdown
               dropdownTitle="Удалить n записей?"
@@ -298,7 +335,7 @@ export const UiKit = () => {
                 theme="link"
                 size="small"
                 isFullWidth
-                buttonIcon={Sun}
+                icon={Sun}
                 className={styles.dropdownButton}
               >
                 Светлая
@@ -306,7 +343,7 @@ export const UiKit = () => {
               <Button
                 size="small"
                 isFullWidth
-                buttonIcon={Moon}
+                icon={Moon}
                 className={styles.dropdownButton}
               >
                 Темная

@@ -1,0 +1,382 @@
+body,
+html {
+  width: 100%;
+  max-width: 1600px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000;
+  font-family: "Ubuntu", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+button {
+  min-height: 32px;
+  color: #459df5;
+  border: 1px;
+  border-radius: 4px;
+  background-color: unset;
+  cursor: pointer;
+}
+.input {
+  min-height: 32px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #459df5;
+}
+.button-color-default:hover {
+  color: white;
+  background: #459df5;
+  border-color: #459df5;
+  opacity: 1;
+}
+.button-color-default:hover::before {
+  color: white;
+  transition: unset;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1920px;
+  position: fixed;
+  top: 0;
+  padding: 32px 48px;
+}
+.header__top {
+  width: 100%;
+  min-height: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__search-and-filters_off {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.searchbar__input {
+  margin-right: 16px;
+  width: 320px;
+  padding-left: 2rem;
+  position: relative;
+}
+.filter-unset-button {
+  /* display: none; */
+  opacity: 0.9;
+}
+.filter-button {
+  border-style: solid;
+  padding-right: 16px;
+}
+.filter-button::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/filter.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left calc(50% - 6px / 2);
+  width: 1.8rem;
+  height: 1rem;
+}
+.filter-button:hover::before {
+  filter: brightness(0) invert(1);
+}
+/*В theme-switch-button::before почему-то обрезается иконка, если ее располагать в линию с текстом */
+.theme-switch-button::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/sun.svg);
+  background-repeat: no-repeat;
+  background-position: top 0px left 4px;
+  width: 1.8rem;
+  height: 0.8rem;
+}
+.theme-switch-button:hover::before {
+  filter: brightness(0) invert(1);
+}
+.refresh-button::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/refresh.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left 4px;
+  width: 1.8rem;
+  height: 1rem;
+}
+.refresh-button:hover::before {
+  filter: brightness(0) invert(1);
+}
+.search-svg {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 107px;
+  left: 55px;
+  z-index: 5;
+}
+.header__search-and-filters_on {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 88px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #ebf0f5;
+  background-color: #ebf0f5;
+}
+.order-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 320px;
+  max-width: 320px;
+}
+.order-amount {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 363px;
+}
+.order-date__title {
+  width: 100%;
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+.order-date__from-input {
+  margin-right: 4px;
+  margin-left: 16px;
+  padding-left: 2rem;
+  width: 142px;
+}
+.order-date__to-input {
+  margin-right: 16px;
+  padding-left: 2rem;
+  width: 142px;
+}
+.order-status__title {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.order-status__input {
+  position: relative;
+  margin-right: 16px;
+  padding: 0 8px;
+  width: 192px;
+}
+/* Убрал отступ 4px сверху от выпадающего меню, так как при ховере меню скрывалось, если попасть в этот отступ. */
+.order-status:hover .order-status-dropdown {
+  opacity: 1;
+  top: 216px;
+}
+/* Как лучше скрывать блок со страницы? */
+.order-status-dropdown {
+  opacity: 0;
+  position: absolute;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 2rem;
+  background-color: white;
+  border: 1px solid;
+  border-color: #ebf0f5;
+  border-radius: 4px;
+  top: -200px;
+  left: 402px;
+}
+.order-status-dropdown__item {
+  text-indent: 0;
+  line-height: 32px;
+  width: 100%;
+}
+.order-status-dropdown__item:hover {
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+.order-status__arrow-down {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid #bad8f5;
+  top: 198px;
+  left: 540px;
+}
+.order-amount__title {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.order-amount__from-input {
+  margin-right: 4px;
+  padding: 0 8px;
+  width: 126px;
+}
+.order-amount__to-input {
+  margin-right: 25px;
+  padding: 0 8px;
+  width: 126px;
+}
+.order-list {
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1920px;
+  position: fixed;
+  top: 264px;
+  padding: 0px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: -1;
+}
+.order-list__header {
+  width: 100%;
+  min-height: 40px;
+  position: sticky;
+  background-color: #459df5;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order-list__header_choice {
+  width: 40px;
+  text-align: center;
+}
+.order-list__header_order-id {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__header_date {
+  min-width: 120px;
+  text-align: left;
+  padding-right: 9px;
+}
+.order-list__header_date::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/v_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left calc(50% - 6px / 2 + 6px);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.order-list__header_status {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__header_status::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/v_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left calc(50% - 6px / 2 + 6px);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.order-list__header_position-count {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__header_position-count::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/v_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left calc(50% - 6px / 2 + 6px);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.order-list__header_order-amount {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__header_order-amount::after {
+  content: "";
+  display: inline-block;
+  background-image: url(../../src/icons/v_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: top 1px left calc(50% - 6px / 2 + 6px);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.order-list__header_customer-name {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__content {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-color: #ebf0f5;
+}
+.order-list__content_choice {
+  width: 40px;
+  text-align: center;
+}
+.order-list__content_order-id {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__content_date {
+  min-width: 120px;
+  text-align: left;
+}
+.order-list__content_status {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__content_position-count {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__content_order-amount {
+  min-width: 80px;
+  text-align: left;
+}
+.order-list__content_customer-name {
+  min-width: 80px;
+  text-align: left;
+}
+.footer {
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1920px;
+  padding: 0px 48px;
+  position: fixed;
+  bottom: 0;
+  /* z-index: -1; */
+}
+.footer__elemement {
+  width: 100%;
+  background-color: #ebf0f5;
+  color: #459df5;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
