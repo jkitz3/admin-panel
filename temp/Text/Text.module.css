@@ -1,0 +1,11 @@
+._ {
+  font-family: "Ubuntu", sans-serif;
+}
+.variant_default {
+  font-size: 13px;
+  line-height: 16px;
+}
+.noWrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
