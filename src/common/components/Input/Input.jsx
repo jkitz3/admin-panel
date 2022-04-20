@@ -36,7 +36,7 @@ export const Input = ({
           {...props}
         />
         {value && !disabled && (
-          <button name={name} onClick={onReset} className={styles.button}>
+          <button onClick={onReset} className={styles.button}>
             {value && <XMedium className={styles.xButton} />}
           </button>
         )}
