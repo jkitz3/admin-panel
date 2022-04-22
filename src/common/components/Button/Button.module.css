@@ -1,0 +1,62 @@
+.button {
+  max-height: 32px;
+  background-repeat: no-repeat;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+.button:focus {
+  outline: none;
+}
+.theme_blue {
+  border: 1px solid #459df5;
+  background-color: #459df5;
+  color: #fff;
+}
+.theme_blue .buttonIcon {
+  fill: #fff;
+}
+.theme_link {
+  color: #459df5;
+}
+.theme_link .buttonIcon {
+  fill: #459df5;
+}
+.theme_text .buttonIcon {
+  fill: #000;
+}
+.size_default {
+  padding: 8px 16px;
+}
+.size_small {
+  padding: 4px 8px;
+}
+.size_default + .buttonIconOnly {
+  padding: 8px 8px;
+}
+.size_small + .buttonIconOnly {
+  padding: 4px 4px;
+}
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+}
+.buttonIcon + .buttonText {
+  padding-left: 8px;
+}
+.buttonSizeSmall > .buttonIcon + .buttonText {
+  padding-left: 4px;
+}
+.buttonFullWidth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.buttonText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

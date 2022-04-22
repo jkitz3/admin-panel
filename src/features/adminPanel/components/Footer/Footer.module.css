@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+}
+.footerHandlers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footerHandlers > * {
+  margin-right: 16px;
+}
+.footerHandlers > *:last-child {
+  margin-right: 0;
+}
+.redButton {
+  border: 1px solid #f53152;
+  background-color: #f53152;
+}
+.choiceCount {
+  color: #459df5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pagination > * {
+  margin-right: 4px;
+}
+.pagination > *:last-child {
+  margin-right: 0;
+  margin-left: 12px;
+}

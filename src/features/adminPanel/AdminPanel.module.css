@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+  min-width: 100px;
+  max-width: 2560px;
+  height: 100vh;
+  padding: 32px 48px 0 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "searchbar_and_filter"
+    "order-list"
+    "footer";
+}
+.wrapperHeader {
+  grid-area: header;
+  margin-bottom: 32px;
+}
+.wrapperSearchbarAndFilter {
+  grid-area: searchbar_and_filter;
+  margin-bottom: 32px;
+}
+.wrapperSearchbar {
+  margin-bottom: 16px;
+}
+.wrapperOrderList {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-area: order-list;
+  min-height: 90px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e6e6e6 #ebf0f5;
+}
+.wrapperOrderList::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+.wrapperOrderList::-webkit-scrollbar-track {
+  background: #ebf0f5;
+}
+.wrapperOrderList::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  border: 1px solid #d2dce6;
+}
+.wrapperFooter {
+  grid-area: footer;
+  display: grid;
+  place-items: center;
+  height: 48px;
+  background-color: #ebf0f5;
+}

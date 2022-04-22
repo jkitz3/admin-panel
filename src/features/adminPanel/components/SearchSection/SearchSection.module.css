@@ -1,0 +1,26 @@
+.searchbar {
+  display: grid;
+  grid-area: searchbar;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 4px;
+}
+.searchbarItemGroup {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-right: 8px;
+}
+.itemGroupInput {
+  width: 256px;
+  height: 32px;
+  margin-right: 8px;
+}
+.itemGroupFilterHandler {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.searchbarContentHandler {
+  display: grid;
+  place-items: center;
+}

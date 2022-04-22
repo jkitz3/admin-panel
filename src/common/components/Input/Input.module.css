@@ -1,0 +1,68 @@
+.button {
+  background-repeat: no-repeat;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.button:focus {
+  outline: none;
+}
+.xButton {
+  width: 16px;
+  position: absolute;
+  height: 16px;
+  top: 8px;
+  left: 233px;
+}
+.input {
+  width: 100%;
+  min-height: 32px;
+  border-radius: 4px;
+  border: 1px solid #459df5;
+  padding: 0 4px 0 8px;
+}
+.inputWithValue {
+  padding-right: 32px;
+}
+.input:focus {
+  outline: none;
+}
+.input::-moz-placeholder {
+  color: #bad8f5;
+}
+.input::-webkit-input-placeholder {
+  color: #bad8f5;
+}
+.blockContent {
+  position: relative;
+  height: 32px;
+}
+.inputIncorrect {
+  border-color: #f53152;
+}
+.inputDisabled {
+  background-color: #bad8f5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.iconDisabled {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 233px;
+}
+.inputIcon {
+  width: 16px;
+  position: absolute;
+  height: 16px;
+  top: 8px;
+  left: 9px;
+  border: unset;
+}
+.inputWithIcon {
+  padding-left: 32px;
+}
