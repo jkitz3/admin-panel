@@ -1,11 +1,10 @@
 import styles from "./AdminPanel.module.css";
 import {
-  FilterContainer,
   FooterContainer,
   HeaderContainer,
   OrderListContainer,
   OrderListHeaderContainer,
-  SearchContainer,
+  SearchAndFilterContainer,
 } from "../../containers";
 
 export const AdminPanel = () => {
@@ -15,12 +14,7 @@ export const AdminPanel = () => {
         <HeaderContainer />
       </div>
       <div className={styles.wrapperSearchbarAndFilter}>
-        <div className={styles.wrapperSearchbar}>
-          <SearchContainer />
-        </div>
-        <div className={styles.wrapperFilter}>
-          <FilterContainer />
-        </div>
+        <SearchAndFilterContainer />
       </div>
       <div className={styles.wrapperOrderList}>
         <OrderListHeaderContainer />

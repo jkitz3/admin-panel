@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
 
-import { orderList, searchValue, filterValue } from "./";
+import { orderList, filterValue } from "./";
 
 export default combineReducers({
   orderList,
-  searchValue,
   filterValue,
 });

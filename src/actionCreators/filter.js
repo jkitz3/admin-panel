@@ -6,11 +6,13 @@ import {
 
 export const setSearchValue = (payload) => ({
   type: SET_SEARCH_VALUE,
-  payload,
+  ...payload,
 });
 
-export const clearSearchValue = () => ({
+export const clearSearchValue = (payload) => ({
   type: CLEAR_SEARCH_VALUE,
+  ...payload,
+  [payload.name]: "",
 });
 
 export const searchByPressEnter = (payload) => ({

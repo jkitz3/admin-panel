@@ -2,7 +2,14 @@ import styles from "./SearchSection.module.css";
 import { Button, Input } from "../../../../common/components";
 import { Search, Filter, Refresh } from "../../../../icons";
 
-export const SearchSection = ({ value, onChange, onReset, ...props }) => {
+export const SearchSection = ({
+  name,
+  value,
+  onChange,
+  onReset,
+  toggleFilter,
+  ...props
+}) => {
   return (
     <div className={styles.searchbar}>
       <div className={styles.searchbarItemGroup}>
@@ -12,13 +19,16 @@ export const SearchSection = ({ value, onChange, onReset, ...props }) => {
             placeholder="Номер заказа или ФИО"
             inputIcon={Search}
             value={value}
+            name={name}
             onChange={onChange}
             onReset={onReset}
             {...props}
           />
         </div>
         <div className={styles.itemGroupFilterHandler}>
-          <Button buttonIcon={Filter}>Фильтры</Button>
+          <Button buttonIcon={Filter} onClick={toggleFilter}>
+            Фильтры
+          </Button>
           <Button theme="link">Сбросить фильтры</Button>
         </div>
       </div>

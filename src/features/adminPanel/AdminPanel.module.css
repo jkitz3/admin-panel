@@ -21,8 +21,11 @@
   grid-area: searchbar_and_filter;
   margin-bottom: 32px;
 }
-.wrapperSearchbar {
+.wrapperSearchbarAndFilter > * {
   margin-bottom: 16px;
+}
+.wrapperSearchbarAndFilter > *:last-child {
+  margin-bottom: 0;
 }
 .wrapperOrderList {
   display: grid;

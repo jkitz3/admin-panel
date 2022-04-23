@@ -1,1 +1,1 @@
-export const getSearchValue = ({ searchValue }) => searchValue;
+// export const getSearchValue = ({ searchValue }) => searchValue;

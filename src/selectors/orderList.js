@@ -1,16 +1,15 @@
 import { createSelector } from "reselect";
+import { getFilterValue } from "./filter";
 
 export const getOrderList = ({ orderList }) => orderList;
-
-export const getFilterValue = ({ filterValue }) => filterValue;
 
 export const getFilteredOrderList = createSelector(
   getOrderList,
   getFilterValue,
-  (orderList, search) =>
+  (orderList, { searchFor }) =>
     orderList.filter(
       ({ id, customerName }) =>
-        id.includes(search) ||
-        customerName.toLowerCase().includes(search.toLowerCase())
+        id.includes(searchFor) ||
+        customerName.toLowerCase().includes(searchFor.toLowerCase())
     )
 );

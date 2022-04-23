@@ -1,1 +1,2 @@
-export { setSearchValue, clearSearchValue, searchByPressEnter } from "./search";
+export { setSearchValue, clearSearchValue, searchByPressEnter } from "./filter";
+export { setFilterVisibility } from "./toggleFilters";
